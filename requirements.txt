@@ -6,7 +6,7 @@ asreview==1.6.2
 asreview-datatools==1.2.2
 asreview-insights==1.1.2
 asreview-makita==0.9
-asreview-template-model-extension @ file:///C:/Users/Sjard/OneDrive%20-%20Universiteit%20Utrecht/Thesis/ASReview/Codebase/template-extension-new-model-main/template-extension-new-model-main
+extension-new-model-main
 asreview-wordcloud==1.0.1
 asttokens==2.4.1
 astunparse==1.6.3
