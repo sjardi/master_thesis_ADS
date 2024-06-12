@@ -1,0 +1,1 @@
+{"message": "ValueError: Negative values in data passed to MultinomialNB (input X)", "type": "ValueError", "datetime": "2024-06-05 02:20:14.374616"}

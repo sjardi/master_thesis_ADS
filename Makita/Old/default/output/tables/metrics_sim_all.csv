@@ -1,0 +1,2 @@
+,file_name,recall_0.1,recall_0.25,recall_0.5,recall_0.75,recall_0.9,wss_0.95,erf_0.1,atd
+0,metrics_sim_van_de_Schoot_2018_0.json,0.972972972972973,1.0,1.0,1.0,1.0,0.89740202553941,0.8648648648648649,91.02702702702703
