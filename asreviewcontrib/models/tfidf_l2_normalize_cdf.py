@@ -1,11 +1,10 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from asreview.models.feature_extraction.base import BaseFeatureExtraction
-import numpy as np
-from scipy.sparse import csr_matrix
 from .normalization_methods import *
 
-class TfidfRelu(BaseFeatureExtraction):
-    name = "tfidfrelu"
+
+class Tfidf_l2_normalize_cdf(BaseFeatureExtraction):
+    name = "tfidf_l2_normalize_cdf"
 
     def __init__(self, *args, ngram_max=1, stop_words="english", **kwargs):
         """Initialize tfidf class."""
@@ -24,8 +23,8 @@ class TfidfRelu(BaseFeatureExtraction):
         self._model.fit(texts)
 
     def transform(self, texts):
-        print("%%%%%%%%%%%%%%% RELU %%%%%%%%%%%%%")
+        print("%%%%%%%%%%%% TF_IDF l2_normalize_cdf %%%%%%%%%%%%%%")
         X = self._model.transform(texts).tocsr()
-        X = relu(X)
+        X = l2_normalize_cdf(X)
         print(X)
         return X

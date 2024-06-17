@@ -1,6 +1,6 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from asreview.models.feature_extraction.base import BaseFeatureExtraction
-from .normalization_methods import sigmoid
+from .normalization_methods import *
 
 
 class TfidfSigmoid(BaseFeatureExtraction):

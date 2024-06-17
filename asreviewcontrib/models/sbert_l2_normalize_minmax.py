@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-__all__ = ["SBERTcdf"]
+__all__ = ["SBERT_l2_normalize_minmax"]
 
 try:
     from sentence_transformers import models
@@ -34,7 +34,7 @@ def _check_st():
             "Install sentence-transformers package to use Sentence BERT.")
 
 
-class SBERTcdf(BaseFeatureExtraction):
+class SBERT_l2_normalize_minmax(BaseFeatureExtraction):
     """Sentence BERT feature extraction technique (``sbert``).
 
     By setting the ``transformer_model`` parameter, you can use other
@@ -75,8 +75,8 @@ class SBERTcdf(BaseFeatureExtraction):
         cls: Uses embeddings of [CLS] token as sentence embeddings
     """
 
-    name = "sbertcdf"
-    label = "SBert CDF"
+    name = "sbert_l2_normalize_minmax"
+    label = "SBert l2_normalize_minmax"
 
     def __init__(
         self,
@@ -86,7 +86,7 @@ class SBERTcdf(BaseFeatureExtraction):
         pooling_mode="mean",
         **kwargs
     ):
-        super(SBERTcdf, self).__init__(*args, **kwargs)
+        super(SBERT_l2_normalize_minmax, self).__init__(*args, **kwargs)
         self.transformer_model = transformer_model
         self.is_pretrained_sbert = is_pretrained_sbert
         self.pooling_mode = pooling_mode
@@ -112,7 +112,7 @@ class SBERTcdf(BaseFeatureExtraction):
                 modules=[word_embedding_model, pooling_layer])
         print("Encoding texts using sbert, this may take a while...")
         X = model.encode(texts, show_progress_bar=True, device=device)
-        X = cdf(X)
+        X = l2_normalize_minmax(X)
         print(X)
 
         return X

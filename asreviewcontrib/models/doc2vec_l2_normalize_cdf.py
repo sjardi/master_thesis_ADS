@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-__all__ = ["Doc2VecMinMax"]
+__all__ = ["Doc2Vec_l2_normalize_cdf"]
 
 import numpy as np
 from .normalization_methods import *
@@ -49,7 +49,7 @@ def _transform_text(model, corpus):
     return np.array(X)
 
 
-class Doc2VecMinMax(BaseFeatureExtraction):
+class Doc2Vec_l2_normalize_cdf(BaseFeatureExtraction):
     """Doc2Vec feature extraction technique (``doc2vec``).
 
     Feature extraction technique provided by the `gensim
@@ -91,8 +91,8 @@ class Doc2VecMinMax(BaseFeatureExtraction):
         Whether to train the word vectors using the skipgram method.
     """
 
-    name = "doc2vecminmax"
-    label = "Doc2VecMinMax"
+    name = "doc2vec_l2_normalize_cdf"
+    label = "Doc2Vec_l2_normalize_cdf"
 
     def __init__(
         self,
@@ -105,12 +105,10 @@ class Doc2VecMinMax(BaseFeatureExtraction):
         dm_concat=0,
         dm=2,
         dbow_words=0,
-        new_min_X=0,
-        new_max_X=1,
         **kwargs
     ):
         """Initialize the doc2vec model."""
-        super(Doc2VecMinMax, self).__init__(*args, **kwargs)
+        super(Doc2Vec_l2_normalize_cdf, self).__init__(*args, **kwargs)
         self.vector_size = int(vector_size)
         self.epochs = int(epochs)
         self.min_count = int(min_count)
@@ -122,8 +120,6 @@ class Doc2VecMinMax(BaseFeatureExtraction):
         self._model = None
         self._model_dm = None
         self._model_dbow = None
-        self.new_min_X = new_min_X
-        self.new_max_X = new_max_X
 
     def fit(self, texts):
         # check is gensim is available
@@ -151,7 +147,7 @@ class Doc2VecMinMax(BaseFeatureExtraction):
             self.model_dbow = _train_model(corpus, **model_param, dm=0)
         else:
             self.model = _train_model(corpus, **model_param, dm=self.dm)
-
+            
     def transform(self, texts):
         # check is gensim is available
         _check_gensim()
@@ -166,9 +162,8 @@ class Doc2VecMinMax(BaseFeatureExtraction):
             X = np.concatenate((X_dm, X_dbow), axis=1)
         else:
             X = _transform_text(self.model, corpus)
-        print("Executing minmax with doc2vec")
-        X = minmax(X)
-
+            
+        X = l2_normalize_cdf(X)
         return X
 
     def full_hyper_space(self):
@@ -176,8 +171,7 @@ class Doc2VecMinMax(BaseFeatureExtraction):
 
         eps = 1e-7
 
-        hyper_space, hyper_choices = super(
-            Doc2VecMinMax, self).full_hyper_space()
+        hyper_space, hyper_choices = super(Doc2Vec_l2_normalize_cdf, self).full_hyper_space()
         hyper_space.update(
             {
                 "fex_vector_size": hp.quniform("fex_vector_size", 31.5, 127.5 - eps, 8),

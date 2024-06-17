@@ -4,6 +4,7 @@ import numpy as np
 from scipy.sparse import csr_matrix
 from .normalization_methods import *
 
+
 class TfidfMinMax(BaseFeatureExtraction):
     name = "tfidfminmax"
 
@@ -26,7 +27,7 @@ class TfidfMinMax(BaseFeatureExtraction):
         self._model.fit(texts)
 
     def transform(self, texts):
-        print("%%%%%%%%%%%%% MIN-MAX %%%%%%%%%%%%%")
+        print("%%%%%%%%%%%%% MIN-MAX with TF-IDF %%%%%%%%%%%%%")
         X = self._model.transform(texts).tocsr()
         X = minmax(X, self.new_min, self.new_max)
         print(X)
