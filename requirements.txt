@@ -115,7 +115,7 @@ rich==13.7.1
 rispy==0.7.1
 rpds-py==0.18.0
 safetensors==0.4.2
-scikit-learn==1.4.2
+scikit-learn==1.5.0
 scipy==1.10.1
 scisort==0.5.3
 scitree==0.5.3
