@@ -1,0 +1,296 @@
+C:\Users\Sjard\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\asreview\io\utils.py:142: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df[col].fillna(LABEL_NA, inplace=True)
+C:\Users\Sjard\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\asreview\io\utils.py:142: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df[col].fillna(LABEL_NA, inplace=True)
+C:\Users\Sjard\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\asreview\io\utils.py:142: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df[col].fillna(LABEL_NA, inplace=True)
+C:\Users\Sjard\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\asreview\io\utils.py:142: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df[col].fillna(LABEL_NA, inplace=True)
+C:\Users\Sjard\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\asreview\io\utils.py:142: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df[col].fillna(LABEL_NA, inplace=True)
+Relevant records found:   3%|2         | 1/38 [00:00<?, ?it/s]
+Records labeled       :   0%|          | 2/4544 [00:00<?, ?it/s][ARelevant records found:   3%|2         | 1/38 [00:00<?, ?it/s]
+Records labeled       :   0%|          | 3/4544 [00:00<09:43,  7.78it/s][ARelevant records found:   3%|2         | 1/38 [00:00<?, ?it/s]
+Records labeled       :   0%|          | 4/4544 [00:00<09:50,  7.69it/s][ARelevant records found:   5%|5         | 2/38 [00:00<00:04,  7.66it/s]
+Records labeled       :   0%|          | 5/4544 [00:00<09:51,  7.68it/s][A
+Records labeled       :   0%|          | 6/4544 [00:00<09:50,  7.68it/s][A
+Records labeled       :   0%|          | 7/4544 [00:00<09:50,  7.68it/s][ARelevant records found:   8%|7         | 3/38 [00:00<00:09,  3.51it/s]
+Records labeled       :   0%|          | 8/4544 [00:00<09:53,  7.64it/s][A
+Records labeled       :   0%|          | 9/4544 [00:00<09:53,  7.64it/s][A
+Records labeled       :   0%|          | 10/4544 [00:01<09:54,  7.63it/s][A
+Records labeled       :   0%|          | 11/4544 [00:01<09:53,  7.63it/s][A
+Records labeled       :   0%|          | 12/4544 [00:01<09:56,  7.60it/s][A
+Records labeled       :   0%|          | 13/4544 [00:01<09:56,  7.60it/s][A
+Records labeled       :   0%|          | 14/4544 [00:01<09:47,  7.71it/s][A
+Records labeled       :   0%|          | 15/4544 [00:01<09:47,  7.72it/s][A
+Records labeled       :   0%|          | 16/4544 [00:01<09:44,  7.75it/s][A
+Records labeled       :   0%|          | 17/4544 [00:01<09:44,  7.74it/s][A
+Records labeled       :   0%|          | 18/4544 [00:02<09:41,  7.79it/s][A
+Records labeled       :   0%|          | 19/4544 [00:02<09:51,  7.66it/s][A
+Records labeled       :   0%|          | 20/4544 [00:02<09:57,  7.57it/s][A
+Records labeled       :   0%|          | 21/4544 [00:02<09:56,  7.59it/s][A
+Records labeled       :   0%|          | 22/4544 [00:02<09:57,  7.56it/s][A
+Records labeled       :   1%|          | 23/4544 [00:02<09:59,  7.54it/s][A
+Records labeled       :   1%|          | 24/4544 [00:02<09:55,  7.59it/s][A
+Records labeled       :   1%|          | 25/4544 [00:03<09:48,  7.68it/s][A
+Records labeled       :   1%|          | 26/4544 [00:03<09:51,  7.64it/s][A
+Records labeled       :   1%|          | 27/4544 [00:03<09:58,  7.54it/s][A
+Records labeled       :   1%|          | 28/4544 [00:03<10:04,  7.47it/s][A
+Records labeled       :   1%|          | 29/4544 [00:03<10:03,  7.49it/s][A
+Records labeled       :   1%|          | 30/4544 [00:03<10:08,  7.42it/s][A
+Records labeled       :   1%|          | 31/4544 [00:03<10:05,  7.45it/s][A
+Records labeled       :   1%|          | 32/4544 [00:03<10:04,  7.47it/s][A
+Records labeled       :   1%|          | 33/4544 [00:04<10:02,  7.49it/s][A
+Records labeled       :   1%|          | 34/4544 [00:04<10:04,  7.47it/s][A
+Records labeled       :   1%|          | 35/4544 [00:04<10:06,  7.43it/s][A
+Records labeled       :   1%|          | 36/4544 [00:04<10:06,  7.43it/s][A
+Records labeled       :   1%|          | 37/4544 [00:04<10:06,  7.43it/s][ARelevant records found:  11%|#         | 4/38 [00:04<01:06,  1.97s/it]
+Records labeled       :   1%|          | 38/4544 [00:04<10:08,  7.40it/s][ARelevant records found:  13%|#3        | 5/38 [00:04<00:41,  1.24s/it]
+Records labeled       :   1%|          | 39/4544 [00:04<10:06,  7.43it/s][A
+Records labeled       :   1%|          | 40/4544 [00:05<10:04,  7.45it/s][A
+Records labeled       :   1%|          | 41/4544 [00:05<10:05,  7.43it/s][A
+Records labeled       :   1%|          | 42/4544 [00:05<10:10,  7.37it/s][A
+Records labeled       :   1%|          | 43/4544 [00:05<10:13,  7.34it/s][A
+Records labeled       :   1%|          | 44/4544 [00:05<10:09,  7.38it/s][ARelevant records found:  16%|#5        | 6/38 [00:05<00:34,  1.09s/it]
+Records labeled       :   1%|          | 45/4544 [00:05<10:10,  7.37it/s][ARelevant records found:  18%|#8        | 7/38 [00:05<00:23,  1.31it/s]
+Records labeled       :   1%|1         | 46/4544 [00:05<10:13,  7.33it/s][A
+Records labeled       :   1%|1         | 47/4544 [00:05<10:13,  7.33it/s][A
+Records labeled       :   1%|1         | 48/4544 [00:06<10:11,  7.35it/s][A
+Records labeled       :   1%|1         | 49/4544 [00:06<10:16,  7.29it/s][A
+Records labeled       :   1%|1         | 50/4544 [00:06<10:20,  7.24it/s][A
+Records labeled       :   1%|1         | 51/4544 [00:06<10:22,  7.22it/s][A
+Records labeled       :   1%|1         | 52/4544 [00:06<10:28,  7.14it/s][ARelevant records found:  21%|##1       | 8/38 [00:06<00:25,  1.20it/s]
+Records labeled       :   1%|1         | 53/4544 [00:06<10:24,  7.19it/s][A
+Records labeled       :   1%|1         | 54/4544 [00:06<10:28,  7.14it/s][A
+Records labeled       :   1%|1         | 55/4544 [00:07<10:25,  7.18it/s][A
+Records labeled       :   1%|1         | 56/4544 [00:07<10:26,  7.16it/s][ARelevant records found:  24%|##3       | 9/38 [00:07<00:21,  1.34it/s]
+Records labeled       :   1%|1         | 57/4544 [00:07<10:33,  7.09it/s][ARelevant records found:  26%|##6       | 10/38 [00:07<00:15,  1.79it/s]
+Records labeled       :   1%|1         | 58/4544 [00:07<10:35,  7.05it/s][A
+Records labeled       :   1%|1         | 59/4544 [00:07<10:36,  7.05it/s][ARelevant records found:  29%|##8       | 11/38 [00:07<00:12,  2.11it/s]
+Records labeled       :   1%|1         | 60/4544 [00:07<10:32,  7.09it/s][ARelevant records found:  32%|###1      | 12/38 [00:07<00:09,  2.70it/s]
+Records labeled       :   1%|1         | 61/4544 [00:07<10:26,  7.15it/s][A
+Records labeled       :   1%|1         | 62/4544 [00:08<10:22,  7.19it/s][A
+Records labeled       :   1%|1         | 63/4544 [00:08<10:27,  7.15it/s][A
+Records labeled       :   1%|1         | 64/4544 [00:08<10:27,  7.14it/s][ARelevant records found:  34%|###4      | 13/38 [00:08<00:10,  2.33it/s]
+Records labeled       :   1%|1         | 65/4544 [00:08<10:31,  7.09it/s][A
+Records labeled       :   1%|1         | 66/4544 [00:08<10:39,  7.00it/s][A
+Records labeled       :   1%|1         | 67/4544 [00:08<10:36,  7.03it/s][A
+Records labeled       :   1%|1         | 68/4544 [00:08<10:31,  7.08it/s][A
+Records labeled       :   2%|1         | 69/4544 [00:09<10:35,  7.05it/s][A
+Records labeled       :   2%|1         | 70/4544 [00:09<10:40,  6.98it/s][A
+Records labeled       :   2%|1         | 71/4544 [00:09<10:45,  6.93it/s][A
+Records labeled       :   2%|1         | 72/4544 [00:09<10:40,  6.98it/s][ARelevant records found:  37%|###6      | 14/38 [00:09<00:15,  1.55it/s]
+Records labeled       :   2%|1         | 73/4544 [00:09<10:36,  7.03it/s][A
+Records labeled       :   2%|1         | 74/4544 [00:09<10:32,  7.06it/s][A
+Records labeled       :   2%|1         | 75/4544 [00:09<10:27,  7.12it/s][A
+Records labeled       :   2%|1         | 76/4544 [00:10<10:27,  7.11it/s][A
+Records labeled       :   2%|1         | 77/4544 [00:10<10:29,  7.09it/s][A
+Records labeled       :   2%|1         | 78/4544 [00:10<10:34,  7.04it/s][A
+Records labeled       :   2%|1         | 79/4544 [00:10<10:33,  7.05it/s][A
+Records labeled       :   2%|1         | 80/4544 [00:10<10:32,  7.05it/s][A
+Records labeled       :   2%|1         | 81/4544 [00:10<10:39,  6.98it/s][A
+Records labeled       :   2%|1         | 82/4544 [00:10<10:35,  7.02it/s][A
+Records labeled       :   2%|1         | 83/4544 [00:11<10:44,  6.92it/s][ARelevant records found:  39%|###9      | 15/38 [00:11<00:21,  1.08it/s]
+Records labeled       :   2%|1         | 84/4544 [00:11<10:45,  6.91it/s][A
+Records labeled       :   2%|1         | 85/4544 [00:11<10:47,  6.89it/s][ARelevant records found:  42%|####2     | 16/38 [00:11<00:16,  1.36it/s]
+Records labeled       :   2%|1         | 86/4544 [00:11<10:47,  6.88it/s][ARelevant records found:  45%|####4     | 17/38 [00:11<00:11,  1.80it/s]
+Records labeled       :   2%|1         | 87/4544 [00:11<10:40,  6.96it/s][A
+Records labeled       :   2%|1         | 88/4544 [00:11<10:36,  7.00it/s][A
+Records labeled       :   2%|1         | 89/4544 [00:11<10:32,  7.04it/s][A
+Records labeled       :   2%|1         | 90/4544 [00:12<10:32,  7.04it/s][A
+Records labeled       :   2%|2         | 91/4544 [00:12<10:37,  6.99it/s][ARelevant records found:  47%|####7     | 18/38 [00:12<00:12,  1.65it/s]
+Records labeled       :   2%|2         | 92/4544 [00:12<10:48,  6.87it/s][ARelevant records found:  50%|#####     | 19/38 [00:12<00:08,  2.15it/s]
+Records labeled       :   2%|2         | 93/4544 [00:12<10:42,  6.93it/s][ARelevant records found:  53%|#####2    | 20/38 [00:12<00:06,  2.71it/s]
+Records labeled       :   2%|2         | 94/4544 [00:12<10:44,  6.90it/s][ARelevant records found:  55%|#####5    | 21/38 [00:12<00:05,  3.31it/s]
+Records labeled       :   2%|2         | 95/4544 [00:12<10:44,  6.90it/s][ARelevant records found:  58%|#####7    | 22/38 [00:12<00:04,  3.93it/s]
+Records labeled       :   2%|2         | 96/4544 [00:12<10:42,  6.93it/s][ARelevant records found:  61%|######    | 23/38 [00:13<00:03,  4.54it/s]
+Records labeled       :   2%|2         | 97/4544 [00:13<10:36,  6.99it/s][A
+Records labeled       :   2%|2         | 98/4544 [00:13<10:46,  6.88it/s][A
+Records labeled       :   2%|2         | 99/4544 [00:13<10:53,  6.80it/s][A
+Records labeled       :   2%|2         | 100/4544 [00:13<10:53,  6.80it/s][ARelevant records found:  63%|######3   | 24/38 [00:13<00:04,  3.01it/s]
+Records labeled       :   2%|2         | 101/4544 [00:13<10:52,  6.81it/s][A
+Records labeled       :   2%|2         | 102/4544 [00:13<10:46,  6.87it/s][A
+Records labeled       :   2%|2         | 103/4544 [00:13<10:48,  6.84it/s][A
+Records labeled       :   2%|2         | 104/4544 [00:14<10:46,  6.86it/s][ARelevant records found:  66%|######5   | 25/38 [00:14<00:05,  2.46it/s]
+Records labeled       :   2%|2         | 105/4544 [00:14<10:45,  6.88it/s][A
+Records labeled       :   2%|2         | 106/4544 [00:14<10:49,  6.84it/s][A
+Records labeled       :   2%|2         | 107/4544 [00:14<10:56,  6.76it/s][A
+Records labeled       :   2%|2         | 108/4544 [00:14<10:55,  6.77it/s][A
+Records labeled       :   2%|2         | 109/4544 [00:14<10:54,  6.77it/s][ARelevant records found:  68%|######8   | 26/38 [00:15<00:06,  1.97it/s]
+Records labeled       :   2%|2         | 110/4544 [00:15<10:56,  6.76it/s][A
+Records labeled       :   2%|2         | 111/4544 [00:15<10:45,  6.87it/s][A
+Records labeled       :   2%|2         | 112/4544 [00:15<10:48,  6.84it/s][ARelevant records found:  71%|#######1  | 27/38 [00:15<00:05,  2.05it/s]
+Records labeled       :   2%|2         | 113/4544 [00:15<10:53,  6.78it/s][ARelevant records found:  74%|#######3  | 28/38 [00:15<00:03,  2.60it/s]
+Records labeled       :   3%|2         | 114/4544 [00:15<10:54,  6.77it/s][A
+Records labeled       :   3%|2         | 115/4544 [00:15<10:52,  6.79it/s][A
+Records labeled       :   3%|2         | 116/4544 [00:15<10:52,  6.79it/s][A
+Records labeled       :   3%|2         | 117/4544 [00:16<10:49,  6.82it/s][ARelevant records found:  76%|#######6  | 29/38 [00:16<00:04,  2.24it/s]
+Records labeled       :   3%|2         | 118/4544 [00:16<10:52,  6.78it/s][A
+Records labeled       :   3%|2         | 119/4544 [00:16<10:53,  6.77it/s][A
+Records labeled       :   3%|2         | 120/4544 [00:16<10:55,  6.75it/s][A
+Records labeled       :   3%|2         | 121/4544 [00:16<10:57,  6.73it/s][A
+Records labeled       :   3%|2         | 122/4544 [00:16<10:52,  6.78it/s][A
+Records labeled       :   3%|2         | 123/4544 [00:16<10:47,  6.83it/s][A
+Records labeled       :   3%|2         | 124/4544 [00:17<10:48,  6.81it/s][ARelevant records found:  79%|#######8  | 30/38 [00:17<00:04,  1.61it/s]
+Records labeled       :   3%|2         | 125/4544 [00:17<10:53,  6.77it/s][A
+Records labeled       :   3%|2         | 126/4544 [00:17<10:54,  6.75it/s][A
+Records labeled       :   3%|2         | 127/4544 [00:17<10:53,  6.76it/s][A
+Records labeled       :   3%|2         | 128/4544 [00:17<10:59,  6.70it/s][ARelevant records found:  82%|########1 | 31/38 [00:17<00:04,  1.63it/s]
+Records labeled       :   3%|2         | 129/4544 [00:17<10:54,  6.74it/s][A
+Records labeled       :   3%|2         | 130/4544 [00:17<10:54,  6.75it/s][A
+Records labeled       :   3%|2         | 131/4544 [00:18<10:52,  6.76it/s][A
+Records labeled       :   3%|2         | 132/4544 [00:18<10:57,  6.71it/s][A
+Records labeled       :   3%|2         | 133/4544 [00:18<11:01,  6.67it/s][A
+Records labeled       :   3%|2         | 134/4544 [00:18<11:05,  6.63it/s][A
+Records labeled       :   3%|2         | 135/4544 [00:18<11:05,  6.63it/s][A
+Records labeled       :   3%|2         | 136/4544 [00:18<10:59,  6.69it/s][A
+Records labeled       :   3%|3         | 137/4544 [00:18<10:51,  6.77it/s][A
+Records labeled       :   3%|3         | 138/4544 [00:19<10:49,  6.78it/s][A
+Records labeled       :   3%|3         | 139/4544 [00:19<10:56,  6.71it/s][A
+Records labeled       :   3%|3         | 140/4544 [00:19<10:59,  6.68it/s][A
+Records labeled       :   3%|3         | 141/4544 [00:19<11:04,  6.62it/s][A
+Records labeled       :   3%|3         | 142/4544 [00:19<11:03,  6.63it/s][A
+Records labeled       :   3%|3         | 143/4544 [00:19<10:57,  6.70it/s][A
+Records labeled       :   3%|3         | 144/4544 [00:20<10:52,  6.74it/s][A
+Records labeled       :   3%|3         | 145/4544 [00:20<10:56,  6.70it/s][A
+Records labeled       :   3%|3         | 146/4544 [00:20<10:59,  6.67it/s][A
+Records labeled       :   3%|3         | 147/4544 [00:20<10:59,  6.66it/s][A
+Records labeled       :   3%|3         | 148/4544 [00:20<11:04,  6.62it/s][A
+Records labeled       :   3%|3         | 149/4544 [00:20<11:00,  6.66it/s][A
+Records labeled       :   3%|3         | 150/4544 [00:20<10:56,  6.69it/s][A
+Records labeled       :   3%|3         | 151/4544 [00:21<10:53,  6.73it/s][A
+Records labeled       :   3%|3         | 152/4544 [00:21<11:03,  6.62it/s][A
+Records labeled       :   3%|3         | 153/4544 [00:21<11:12,  6.53it/s][A
+Records labeled       :   3%|3         | 154/4544 [00:21<11:12,  6.53it/s][A
+Records labeled       :   3%|3         | 155/4544 [00:21<11:14,  6.51it/s][A
+Records labeled       :   3%|3         | 156/4544 [00:21<11:13,  6.52it/s][ARelevant records found:  84%|########4 | 32/38 [00:22<00:10,  1.69s/it]
+Records labeled       :   3%|3         | 157/4544 [00:22<11:06,  6.58it/s][A
+Records labeled       :   3%|3         | 158/4544 [00:22<11:06,  6.58it/s][ARelevant records found:  87%|########6 | 33/38 [00:22<00:06,  1.28s/it]
+Records labeled       :   3%|3         | 159/4544 [00:22<11:13,  6.51it/s][A
+Records labeled       :   4%|3         | 160/4544 [00:22<11:11,  6.53it/s][A
+Records labeled       :   4%|3         | 161/4544 [00:22<11:11,  6.52it/s][A
+Records labeled       :   4%|3         | 162/4544 [00:22<11:09,  6.55it/s][ARelevant records found:  89%|########9 | 34/38 [00:22<00:04,  1.08s/it]
+Records labeled       :   4%|3         | 163/4544 [00:22<11:07,  6.56it/s][A
+Records labeled       :   4%|3         | 164/4544 [00:23<11:08,  6.55it/s][A
+Records labeled       :   4%|3         | 165/4544 [00:23<11:11,  6.52it/s][A
+Records labeled       :   4%|3         | 166/4544 [00:23<11:13,  6.50it/s][A
+Records labeled       :   4%|3         | 167/4544 [00:23<11:17,  6.46it/s][A
+Records labeled       :   4%|3         | 168/4544 [00:23<11:16,  6.47it/s][A
+Records labeled       :   4%|3         | 169/4544 [00:23<11:10,  6.52it/s][A
+Records labeled       :   4%|3         | 170/4544 [00:24<11:08,  6.54it/s][A
+Records labeled       :   4%|3         | 171/4544 [00:24<11:09,  6.53it/s][A
+Records labeled       :   4%|3         | 172/4544 [00:24<11:15,  6.48it/s][A
+Records labeled       :   4%|3         | 173/4544 [00:24<11:12,  6.50it/s][A
+Records labeled       :   4%|3         | 174/4544 [00:24<11:16,  6.46it/s][A
+Records labeled       :   4%|3         | 175/4544 [00:24<11:10,  6.52it/s][A
+Records labeled       :   4%|3         | 176/4544 [00:24<11:05,  6.56it/s][ARelevant records found:  92%|#########2| 35/38 [00:25<00:04,  1.40s/it]
+Records labeled       :   4%|3         | 177/4544 [00:25<11:04,  6.58it/s][ARelevant records found:  95%|#########4| 36/38 [00:25<00:02,  1.03s/it]
+Records labeled       :   4%|3         | 178/4544 [00:25<11:09,  6.52it/s][A
+Records labeled       :   4%|3         | 179/4544 [00:25<11:13,  6.48it/s][A
+Records labeled       :   4%|3         | 180/4544 [00:25<11:14,  6.47it/s][A
+Records labeled       :   4%|3         | 181/4544 [00:25<11:20,  6.41it/s][A
+Records labeled       :   4%|4         | 182/4544 [00:25<11:14,  6.47it/s][A
+Records labeled       :   4%|4         | 183/4544 [00:26<11:17,  6.43it/s][A
+Records labeled       :   4%|4         | 184/4544 [00:26<11:18,  6.42it/s][A
+Records labeled       :   4%|4         | 185/4544 [00:26<11:27,  6.34it/s][A
+Records labeled       :   4%|4         | 186/4544 [00:26<11:26,  6.35it/s][A
+Records labeled       :   4%|4         | 187/4544 [00:26<11:30,  6.31it/s][A
+Records labeled       :   4%|4         | 188/4544 [00:26<11:27,  6.34it/s][A
+Records labeled       :   4%|4         | 189/4544 [00:26<11:18,  6.42it/s][A
+Records labeled       :   4%|4         | 190/4544 [00:27<11:13,  6.47it/s][A
+Records labeled       :   4%|4         | 191/4544 [00:27<11:17,  6.42it/s][A
+Records labeled       :   4%|4         | 192/4544 [00:27<11:16,  6.43it/s][A
+Records labeled       :   4%|4         | 193/4544 [00:27<11:19,  6.40it/s][A
+Records labeled       :   4%|4         | 194/4544 [00:27<11:25,  6.34it/s][A
+Records labeled       :   4%|4         | 195/4544 [00:27<11:20,  6.39it/s][A
+Records labeled       :   4%|4         | 196/4544 [00:28<11:18,  6.41it/s][A
+Records labeled       :   4%|4         | 197/4544 [00:28<11:30,  6.30it/s][A
+Records labeled       :   4%|4         | 198/4544 [00:28<11:36,  6.24it/s][A
+Records labeled       :   4%|4         | 199/4544 [00:28<11:35,  6.24it/s][A
+Records labeled       :   4%|4         | 200/4544 [00:28<11:38,  6.22it/s][A
+Records labeled       :   4%|4         | 201/4544 [00:28<11:37,  6.23it/s][A
+Records labeled       :   4%|4         | 202/4544 [00:29<11:27,  6.31it/s][A
+Records labeled       :   4%|4         | 203/4544 [00:29<11:25,  6.33it/s][A
+Records labeled       :   4%|4         | 204/4544 [00:29<11:27,  6.32it/s][A
+Records labeled       :   5%|4         | 205/4544 [00:29<11:36,  6.23it/s][A
+Records labeled       :   5%|4         | 206/4544 [00:29<11:43,  6.17it/s][A
+Records labeled       :   5%|4         | 207/4544 [00:29<12:04,  5.99it/s][A
+Records labeled       :   5%|4         | 208/4544 [00:30<12:01,  6.01it/s][A
+Records labeled       :   5%|4         | 209/4544 [00:30<11:56,  6.05it/s][A
+Records labeled       :   5%|4         | 210/4544 [00:30<11:55,  6.06it/s][A
+Records labeled       :   5%|4         | 211/4544 [00:30<11:47,  6.12it/s][A
+Records labeled       :   5%|4         | 212/4544 [00:30<11:47,  6.12it/s][A
+Records labeled       :   5%|4         | 213/4544 [00:30<11:38,  6.20it/s][A
+Records labeled       :   5%|4         | 214/4544 [00:30<11:28,  6.29it/s][A
+Records labeled       :   5%|4         | 215/4544 [00:31<11:22,  6.34it/s][A
+Records labeled       :   5%|4         | 216/4544 [00:31<11:29,  6.28it/s][A
+Records labeled       :   5%|4         | 217/4544 [00:31<11:41,  6.17it/s][A
+Records labeled       :   5%|4         | 218/4544 [00:31<11:41,  6.17it/s][A
+Records labeled       :   5%|4         | 219/4544 [00:31<11:44,  6.14it/s][A
+Records labeled       :   5%|4         | 220/4544 [00:31<11:43,  6.15it/s][A
+Records labeled       :   5%|4         | 221/4544 [00:32<11:39,  6.18it/s][A
+Records labeled       :   5%|4         | 222/4544 [00:32<11:36,  6.20it/s][A
+Records labeled       :   5%|4         | 223/4544 [00:32<11:48,  6.10it/s][ARelevant records found:  97%|#########7| 37/38 [00:32<00:02,  2.93s/it]
+Records labeled       :   5%|4         | 224/4544 [00:32<11:47,  6.11it/s][A
+Records labeled       :   5%|4         | 225/4544 [00:32<11:49,  6.09it/s][A
+Records labeled       :   5%|4         | 226/4544 [00:32<11:40,  6.16it/s][A
+Records labeled       :   5%|4         | 227/4544 [00:33<11:37,  6.19it/s][A
+Records labeled       :   5%|5         | 228/4544 [00:33<11:46,  6.11it/s][A
+Records labeled       :   5%|5         | 229/4544 [00:33<11:51,  6.07it/s][A
+Records labeled       :   5%|5         | 230/4544 [00:33<11:57,  6.01it/s][A
+Records labeled       :   5%|5         | 231/4544 [00:33<11:58,  6.00it/s][A
+Records labeled       :   5%|5         | 232/4544 [00:33<11:50,  6.07it/s][A
+Records labeled       :   5%|5         | 233/4544 [00:34<11:48,  6.08it/s][A
+Records labeled       :   5%|5         | 234/4544 [00:34<11:50,  6.07it/s][A
+Records labeled       :   5%|5         | 235/4544 [00:34<11:47,  6.09it/s][A
+Records labeled       :   5%|5         | 236/4544 [00:34<11:55,  6.02it/s][A
+Records labeled       :   5%|5         | 237/4544 [00:34<12:03,  5.95it/s][A
+Records labeled       :   5%|5         | 238/4544 [00:34<12:05,  5.94it/s][A
+Records labeled       :   5%|5         | 239/4544 [00:35<11:57,  6.00it/s][A
+Records labeled       :   5%|5         | 240/4544 [00:35<11:55,  6.01it/s][A
+Records labeled       :   5%|5         | 241/4544 [00:35<12:01,  5.97it/s][A
+Records labeled       :   5%|5         | 242/4544 [00:35<12:05,  5.93it/s][A
+Records labeled       :   5%|5         | 243/4544 [00:35<12:05,  5.93it/s][A
+Records labeled       :   5%|5         | 244/4544 [00:35<11:55,  6.01it/s][A
+Records labeled       :   5%|5         | 245/4544 [00:36<11:48,  6.07it/s][A
+Records labeled       :   5%|5         | 246/4544 [00:36<11:55,  6.00it/s][A
+Records labeled       :   5%|5         | 247/4544 [00:36<11:55,  6.01it/s][A
+Records labeled       :   5%|5         | 248/4544 [00:36<12:05,  5.92it/s][A
+Records labeled       :   5%|5         | 249/4544 [00:36<12:01,  5.95it/s][A
+Records labeled       :   6%|5         | 250/4544 [00:36<11:51,  6.04it/s][A
+Records labeled       :   6%|5         | 251/4544 [00:37<11:46,  6.08it/s][A
+Records labeled       :   6%|5         | 252/4544 [00:37<11:53,  6.01it/s][A
+Records labeled       :   6%|5         | 253/4544 [00:37<11:53,  6.01it/s][A
+Records labeled       :   6%|5         | 254/4544 [00:37<11:53,  6.02it/s][A
+Records labeled       :   6%|5         | 255/4544 [00:37<11:56,  5.99it/s][A
+Records labeled       :   6%|5         | 256/4544 [00:37<11:48,  6.05it/s][A
+Records labeled       :   6%|5         | 257/4544 [00:38<11:50,  6.03it/s][A
+Records labeled       :   6%|5         | 258/4544 [00:38<11:59,  5.95it/s][A
+Records labeled       :   6%|5         | 259/4544 [00:38<12:08,  5.88it/s][A
+Records labeled       :   6%|5         | 260/4544 [00:38<12:09,  5.87it/s][A
+Records labeled       :   6%|5         | 261/4544 [00:38<12:12,  5.84it/s][A

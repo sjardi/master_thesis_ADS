@@ -1,8 +1,8 @@
 import numpy as np
-from scipy.sparse import csr_matrix
-from scipy.stats import norm
+import cupy as cp
 import torch
-
+from scipy.sparse import csr_matrix, isspmatrix_csr
+from cupyx.scipy.special import erf
 
 def get_device():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -12,333 +12,189 @@ def get_device():
         print("Using CPU")
     return device
 
+def to_gpu(tensor):
+    print(" TENSOR TO GPU")
+    return cp.array(tensor) if isinstance(tensor, np.ndarray) else tensor
 
-def minmax(x, new_min=0, new_max=1):
-    """Normalize the input data to a new range [new_min, new_max].
+def to_cpu(tensor):
+    print(" TENSOR TO CPU")
 
-    Parameters:
-    - x: Input data, can be a sparse matrix (csr_matrix) or a dense array.
-    - new_min: New minimum value after normalization.
-    - new_max: New maximum value after normalization.
+    return cp.asnumpy(tensor) if isinstance(tensor, cp.ndarray) else np.array(tensor)
 
-    Returns:
-    - Normalized data with values scaled to the range [new_min, new_max].
-    """
-    device = get_device()
-    if isinstance(x, csr_matrix):
-        x_dense = x.toarray()
-        x_tensor = torch.tensor(x_dense, device=device)
-        x_min = torch.min(x_tensor)
-        x_max = torch.max(x_tensor)
-        x_scaled = ((x_tensor - x_min) / (x_max - x_min)) * \
-            (new_max - new_min) + new_min
-        return x_scaled.cpu().numpy()
+def minmax_fn(tensor, new_min=0, new_max=1):
+    print("########## MIN-MAX function #########")
+    min_val = cp.min(tensor) if isinstance(tensor, cp.ndarray) else np.min(tensor)
+    max_val = cp.max(tensor) if isinstance(tensor, cp.ndarray) else np.max(tensor)
+    return ((tensor - min_val) / (max_val - min_val)) * (new_max - new_min) + new_min if max_val != min_val else tensor
+
+def absmin_fn(tensor):
+    print("############## absmin function #############")
+    
+    min_val = cp.min(tensor) if isinstance(tensor, cp.ndarray) else np.min(tensor)
+    abs_min_val = cp.abs(min_val) if isinstance(tensor, cp.ndarray) else np.abs(min_val)
+    return tensor + abs_min_val if min_val < 0 else tensor
+
+def sqrt_fn(tensor):
+    print("############## sqrt function #############")
+    return cp.sqrt(cp.abs(tensor)) if isinstance(tensor, cp.ndarray) else np.sqrt(np.abs(tensor))
+
+def cdf_fn(tensor):
+    print("############## CDF function #############")
+    mean = cp.mean(tensor) if isinstance(tensor, cp.ndarray) else np.mean(tensor)
+    std = cp.std(tensor) if isinstance(tensor, cp.ndarray) else np.std(tensor)
+    standardized_tensor = (tensor - mean) / std
+    return 0.5 * (1 + erf(standardized_tensor / cp.sqrt(2))) if isinstance(tensor, cp.ndarray) else 0.5 * (1 + np.erf(standardized_tensor / np.sqrt(2)))
+
+def sigmoid_fn(tensor):
+    print("############## sigmoid function #############")
+    return cp.divide(1, (1 + cp.exp(-tensor))) if isinstance(tensor, cp.ndarray) else 1 / (1 + np.exp(-tensor))
+
+def zscore_fn(tensor):
+    print("############## zscore function #############")
+    if isinstance(tensor, cp.ndarray):
+        mean = cp.mean(tensor)
+        std = cp.std(tensor)
+        return (tensor - mean) / std if std != 0 else cp.zeros_like(tensor)
     else:
-        x_tensor = torch.tensor(x, device=device)
-        x_min = torch.min(x_tensor)
-        x_max = torch.max(x_tensor)
-        x_scaled = ((x_tensor - x_min) / (x_max - x_min)) * \
-            (new_max - new_min) + new_min
-        return x_scaled.cpu().numpy()
+        mean = np.mean(tensor)
+        std = np.std(tensor)
+        return (tensor - mean) / std if std != 0 else np.zeros_like(tensor)
 
-
-def absmin(x):
-    """Shift input data to ensure all values are non-negative by adding the absolute value of the minimum value.
-
-    Parameters:
-    - x: Input data, can be a sparse matrix (csr_matrix) or a dense array.
-
-    Returns:
-    - Data shifted to be non-negative.
-    """
-    device = get_device()
-    if isinstance(x, csr_matrix):
-        x_dense = x.toarray()
-        x_tensor = torch.tensor(x_dense, device=device)
-        min_value = torch.min(x_tensor)
-        if min_value < 0:
-            x_shifted = x_tensor + torch.abs(min_value)
-            return x_shifted.cpu().numpy()
-        return x_dense
+def pareto_fn(tensor):
+    print("############## pareto function #############")
+    if isinstance(tensor, cp.ndarray):
+        mean = cp.mean(tensor)
+        std = cp.sqrt(cp.std(tensor))
+        return (tensor - mean) / std if std != 0 else cp.zeros_like(tensor)
     else:
-        x_tensor = torch.tensor(x, device=device)
-        min_value = torch.min(x_tensor)
-        if min_value < 0:
-            x_shifted = x_tensor + torch.abs(min_value)
-            return x_shifted.cpu().numpy()
-        return x
+        mean = np.mean(tensor)
+        std = np.sqrt(np.std(tensor))
+        return (tensor - mean) / std if std != 0 else np.zeros_like(tensor)
 
-
-def relu(x):
-    """Apply the ReLU function to input data.
-
-    Parameters:
-    - x: Input data, can be a sparse matrix (csr_matrix) or a dense array.
-
-    Returns:
-    - Data with ReLU applied.
-    """
-    device = get_device()
-    if isinstance(x, csr_matrix):
-        x_dense = x.toarray()
-        x_tensor = torch.tensor(x_dense, device=device)
-        x_relu = torch.relu(x_tensor)
-        return x_relu.cpu().numpy()
+def l2_normalize_fn(tensor):
+    print("############## l2 normalize function #############")
+    if isinstance(tensor, cp.ndarray):
+        l2_norm = cp.linalg.norm(tensor)
+        return tensor / l2_norm if l2_norm != 0 else tensor
     else:
-        x_tensor = torch.tensor(x, device=device)
-        x_relu = torch.relu(x_tensor)
-        return x_relu.cpu().numpy()
+        l2_norm = np.linalg.norm(tensor)
+        return tensor / l2_norm if l2_norm != 0 else tensor
 
-
-def softplus(x):
-    """Apply the Softplus function to input data.
-
-    Parameters:
-    - x: Input data, can be a sparse matrix (csr_matrix) or a dense array.
-
-    Returns:
-    - Data with Softplus applied.
-    """
+def apply_transformations(vector, transformations):
     device = get_device()
-    if isinstance(x, csr_matrix):
-        x_dense = x.toarray()
-        x_tensor = torch.tensor(x_dense, device=device)
-        x_softplus = torch.log1p(torch.exp(x_tensor))
-        return x_softplus.cpu().numpy()
-    else:
-        x_tensor = torch.tensor(x, device=device)
-        x_softplus = torch.log1p(torch.exp(x_tensor))
-        return x_softplus.cpu().numpy()
+    use_gpu = device.type == 'cuda'
+    print("############## Using Cuda:" , device.type == 'cuda', " #############")
+    
+    
+    if isspmatrix_csr(vector):
+        vector = vector.toarray()  # Convert sparse matrix to dense array for processing
+    
+    tensor = to_gpu(vector) if use_gpu else np.array(vector)
 
+    for transform_fn in transformations:
+        print(f"Applying {transform_fn.__name__} on {device}")
+        tensor = transform_fn(tensor)
 
-def sigmoid(x):
-    """Apply the Sigmoid function to input data.
+    result = to_cpu(tensor) if use_gpu else np.array(tensor)
+    return csr_matrix(result) if isspmatrix_csr(vector) else result
 
-    Parameters:
-    - x: Input data, can be a sparse matrix (csr_matrix) or a dense array.
+# Define scaling functions
+scaling_functions = {
+    'minmax': minmax_fn,
+    'absmin': absmin_fn,
+    'sqrt': sqrt_fn,
+    'cdf': cdf_fn,
+    'sigmoid': sigmoid_fn
+}
 
-    Returns:
-    - Data with Sigmoid applied.
-    """
-    device = get_device()
-    if isinstance(x, csr_matrix):
-        x_dense = x.toarray()
-        x_tensor = torch.tensor(x_dense, device=device)
-        x_sigmoid = torch.sigmoid(x_tensor)
-        return x_sigmoid.cpu().numpy()
-    else:
-        x_tensor = torch.tensor(x, device=device)
-        x_sigmoid = torch.sigmoid(x_tensor)
-        return x_sigmoid.cpu().numpy()
+# Define normalization functions
+normalization_functions = {
+    'zscore': zscore_fn,
+    'pareto': pareto_fn,
+    'l2_normalize': l2_normalize_fn
+}
 
+# Generate individual scaling functions dynamically
+for scale_name, scale_fn in scaling_functions.items():
+    globals()[scale_name] = lambda vector, scale_fn=scale_fn: apply_transformations(vector, [scale_fn])
 
-def cdf(x):
-    """Apply the cumulative distribution function (CDF) to input data.
+# Generate combined normalization and scaling functions dynamically
+for norm_name, norm_fn in normalization_functions.items():
+    for scale_name, scale_fn in scaling_functions.items():
+        func_name = f"{norm_name}_{scale_name}"
+        globals()[func_name] = lambda vector, norm_fn=norm_fn, scale_fn=scale_fn: apply_transformations(vector, [norm_fn, scale_fn])
 
-    Parameters:
-    - x: Input data, can be a sparse matrix (csr_matrix) or a dense array.
+import numpy as np
+import pandas as pd
+import os
+import matplotlib.pyplot as plt
+from sklearn.decomposition import PCA
+import scipy.sparse
+from sklearn.preprocessing import normalize
 
-    Returns:
-    - Data with CDF applied.
-    """
-    device = get_device()
-    if isinstance(x, csr_matrix):
-        x_dense = x.toarray()
-        x_tensor = torch.tensor(x_dense, device=device)
-        mean = torch.mean(x_tensor)
-        std = torch.std(x_tensor)
-        standardized_x = (x_tensor - mean) / std
-        x_cdf = 0.5 * (1 + torch.erf(standardized_x /
-                       torch.sqrt(torch.tensor(2.0, device=device))))
-        return x_cdf.cpu().numpy()
-    else:
-        x_tensor = torch.tensor(x, device=device)
-        mean = torch.mean(x_tensor)
-        std = torch.std(x_tensor)
-        standardized_x = (x_tensor - mean) / std
-        x_cdf = 0.5 * (1 + torch.erf(standardized_x /
-                       torch.sqrt(torch.tensor(2.0, device=device))))
-        return x_cdf.cpu().numpy()
+def add_embeddings(X, name):
+    # print(f"################# Adding to embedding file and creating plots for {name} ################")
+    
+    # # Convert sparse matrix to dense if necessary
+    # if scipy.sparse.issparse(X):
+    #     print(f"Converting sparse matrix of shape {X.shape} to dense")
+    #     X = X.toarray()
+    
+    # print(f"Shape of dense X: {X.shape}")
+    
+    # # Check if X is a 2D array
+    # if len(X.shape) != 2:
+    #     print(f"Error: Expected a 2D array, but got an array with shape {X.shape}")
+    #     return
 
+    # # File handling
+    # csv_file_path = r"C:\Users\Sjard\OneDrive - Universiteit Utrecht\Thesis\ASReview\Simulation_study_PTSD\Makita\fe_em\Graphs"
+    # if os.path.exists(csv_file_path):
+    #     os.remove(csv_file_path)
+    #     print(f"Deleted existing file: {csv_file_path}")
 
-# import numpy as np
-# from scipy.sparse import csr_matrix
-# from scipy.stats import norm
+    # # # Create new DataFrame and save to CSV
+    # # new_data = pd.DataFrame(X, columns=[f"dim_{i+1}" for i in range(X.shape[1])])
+    # # new_data.insert(0, 'name', [f"{name}_{i}" for i in range(X.shape[0])])
+    # # new_data.to_csv(csv_file_path, index=False)
+    # # print(f"Embeddings saved to {csv_file_path}")
 
-# def minmax(x, new_min=0, new_max=1):
-#     """Normalize the input data to a new range [new_min, new_max].
+    # # Create plots
+    # fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 5))
 
-#     Parameters:
-#     - x: Input data, can be a sparse matrix (csr_matrix) or a dense array.
-#     - new_min: New minimum value after normalization.
-#     - new_max: New maximum value after normalization.
+    # # Histogram plot
+    # flattened_X = X.flatten()
+    # ax1.hist(flattened_X, bins=100, alpha=0.75, edgecolor='black')
+    # ax1.set_title(f"Histogram of {name} Values")
+    # ax1.set_xlabel("Value")
+    # ax1.set_ylabel("Frequency")
+    # ax1.set_yscale('log')
+    # ax1.grid(True)
 
-#     Returns:
-#     - Normalized data with values scaled to the range [new_min, new_max].
-#     """
-#     if isinstance(x, csr_matrix):
-#         x_min = x.data.min()
-#         x_max = x.data.max()
-#         x.data = ((x.data - x_min) / (x_max - x_min)) * (new_max - new_min) + new_min
-#         return x
-#     else:
-#         x_min = np.min(x)
-#         x_max = np.max(x)
-#         return ((x - x_min) / (x_max - x_min)) * (new_max - new_min) + new_min
+    # # PCA plot
+    # pca = PCA(n_components=2)
+    # pca_result = pca.fit_transform(X)
+    
+    # # Calculate vector magnitudes for coloring
+    # magnitudes = np.linalg.norm(X, axis=1)
+    
+    # scatter = ax2.scatter(pca_result[:, 0], pca_result[:, 1], 
+    #                       c=magnitudes, cmap='viridis', 
+    #                       alpha=0.5, s=1)
+    # ax2.set_title(f"PCA of {name} Document Embeddings")
+    # ax2.set_xlabel("Principal Component 1")
+    # ax2.set_ylabel("Principal Component 2")
+    # ax2.grid(True)
+    # plt.colorbar(scatter, ax=ax2, label='Vector Magnitude')
 
-# def absmin(x):
-#     """Shift input data to ensure all values are non-negative by adding the absolute value of the minimum value.
-
-#     Parameters:
-#     - x: Input data, can be a sparse matrix (csr_matrix) or a dense array.
-
-#     Returns:
-#     - Data shifted to be non-negative.
-#     """
-#     if isinstance(x, csr_matrix):
-#         min_value = x.data.min()
-#         if (min_value < 0):
-#             x.data += np.abs(min_value)
-#         return x
-#     else:
-#         min_value = np.min(x)
-#         if (min_value < 0):
-#             x += np.abs(min_value)
-#         return x
-
-# def relu(x):
-#     """Apply the ReLU function to input data.
-
-#     Parameters:
-#     - x: Input data, can be a sparse matrix (csr_matrix) or a dense array.
-
-#     Returns:
-#     - Data with ReLU applied.
-#     """
-#     if isinstance(x, csr_matrix):
-#         x.data = np.maximum(0, x.data)
-#         return x
-#     else:
-#         return np.maximum(0, x)
-
-# def softplus(x):
-#     """Apply the Softplus function to input data.
-
-#     Parameters:
-#     - x: Input data, can be a sparse matrix (csr_matrix) or a dense array.
-
-#     Returns:
-#     - Data with Softplus applied.
-#     """
-#     if isinstance(x, csr_matrix):
-#         x.data = np.log1p(np.exp(x.data))
-#         return x
-#     else:
-#         return np.log1p(np.exp(x))
-
-# def sigmoid(x):
-#     """Apply the Sigmoid function to input data.
-
-#     Parameters:
-#     - x: Input data, can be a sparse matrix (csr_matrix) or a dense array.
-
-#     Returns:
-#     - Data with Sigmoid applied.
-#     """
-#     if isinstance(x, csr_matrix):
-#         x.data = 1 / (1 + np.exp(-x.data))
-#         return x
-#     else:
-#         return 1 / (1 + np.exp(-x))
-
-# def cdf(x):
-#     """Apply the cumulative distribution function (CDF) to input data.
-
-#     Parameters:
-#     - x: Input data, can be a sparse matrix (csr_matrix) or a dense array.
-
-#     Returns:
-#     - Data with CDF applied.
-#     """
-#     if isinstance(x, csr_matrix):
-#         # Standardize data
-#         mean = np.mean(x.data)
-#         std = np.std(x.data)
-#         x.data = (x.data - mean) / std
-#         # Apply CDF to data
-#         x.data = norm.cdf(x.data)
-#         return x
-#     else:
-#         # Standardize data
-#         mean = np.mean(x)
-#         std = np.std(x)
-#         standardized_x = (x - mean) / std
-#         # Apply CDF to data
-#         return norm.cdf(standardized_x)
-
-
-# # normalization_methods.py
-# import numpy as np
-# from scipy.sparse import csr_matrix
-# from scipy.stats import norm
-
-# def minmax(x, new_min=0, new_max=1):
-#     """Normalize the input data to a new range [new_min, new_max].
-
-#     Parameters:
-#     - x: Input data, can be a sparse matrix (csr_matrix) or a dense array.
-#     - new_min: New minimum value after normalization.
-#     - new_max: New maximum value after normalization.
-
-#     Returns:
-#     - Normalized data with values scaled to the range [new_min, new_max].
-#     """
-#     if isinstance(x, csr_matrix):
-#         x_min = x.data.min()
-#         x_max = x.data.max()
-#         x.data = ((x.data - x_min) / (x_max - x_min)) * (new_max - new_min) + new_min
-#         return x
-#     else:
-#         x_min = np.min(x)
-#         x_max = np.max(x)
-#         return ((x - x_min) / (x_max - x_min)) * (new_max - new_min) + new_min
-
-# def absmin(x):
-#     """Shift input data to ensure all values are non-negative by adding the absolute value of the minimum value.
-
-#     Parameters:
-#     - x: Input data, can be a sparse matrix (csr_matrix) or a dense array.
-
-#     Returns:
-#     - Data shifted to be non-negative.
-#     """
-#     if isinstance(x, csr_matrix):
-#         min_value = x.data.min()
-#         if min_value < 0:
-#             x.data += np.abs(min_value)
-#         return x
-#     else:
-#         min_value = np.min(x)
-#         if min_value < 0:
-#             x += np.abs(min_value)
-#         return x
-
-# def relu(x):
-#     # Check if the input is a sparse matrix in CSR format
-#     if isinstance(x, csr_matrix):
-#         # Apply ReLU to the data array of the sparse matrix
-#         x.data = np.maximum(0, x.data)
-#         return x
-#     else:
-#         # Fallback for dense arrays
-#         return np.maximum(0, x)
-
-# def softplus(x):
-#         return np.log1p(np.exp(x))
-
-# def sigmoid(x):
-#     return 1 / (1 + np.exp(-x.data))
-
-# def cdf(x):
-#     x = norm.cdf(x.toarray())
-#     return csr_matrix(x)
+    # plt.tight_layout()
+    
+    # # Save the plot
+    # plot_file_path = os.path.join(os.path.dirname(csv_file_path), f"{name}_plots.png")
+    # if os.path.exists(plot_file_path):
+    #     os.remove(plot_file_path)
+    #     print(f"Deleted existing plot: {plot_file_path}")
+    # plt.savefig(plot_file_path, dpi=300, bbox_inches='tight')
+    # plt.close(fig)
+    # print(f"Plots saved to {plot_file_path}")
+    print("Method fired without execution.")

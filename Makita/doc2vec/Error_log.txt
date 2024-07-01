@@ -1,0 +1,83 @@
+C:\Users\Sjard\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\asreview\io\utils.py:142: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df[col].fillna(LABEL_NA, inplace=True)
+C:\Users\Sjard\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\asreview\io\utils.py:142: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df[col].fillna(LABEL_NA, inplace=True)
+C:\Users\Sjard\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\asreview\io\utils.py:142: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df[col].fillna(LABEL_NA, inplace=True)
+C:\Users\Sjard\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\asreview\io\utils.py:142: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df[col].fillna(LABEL_NA, inplace=True)
+C:\Users\Sjard\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\asreview\io\utils.py:142: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df[col].fillna(LABEL_NA, inplace=True)
+Relevant records found:   3%|2         | 1/38 [00:00<?, ?it/s]
+Records labeled       :   0%|          | 2/4544 [00:00<?, ?it/s][ARelevant records found:   3%|2         | 1/38 [00:00<?, ?it/s]
+Records labeled       :   1%|          | 27/4544 [00:00<00:18, 246.31it/s][ARelevant records found:   8%|7         | 3/38 [00:00<00:01, 19.85it/s]
+Records labeled       :   1%|1         | 57/4544 [00:00<00:16, 276.46it/s][ARelevant records found:  18%|#8        | 7/38 [00:00<00:00, 31.28it/s]
+Records labeled       :   2%|1         | 86/4544 [00:00<00:15, 278.68it/s][A
+Records labeled       :   3%|2         | 114/4544 [00:00<00:16, 275.46it/s][ARelevant records found:  26%|##6       | 10/38 [00:00<00:01, 22.85it/s]
+Records labeled       :   3%|3         | 142/4544 [00:00<00:16, 274.18it/s][ARelevant records found:  34%|###4      | 13/38 [00:00<00:01, 24.13it/s]
+Records labeled       :   4%|3         | 170/4544 [00:00<00:16, 271.38it/s][ARelevant records found:  50%|#####     | 19/38 [00:00<00:00, 34.81it/s]
+Records labeled       :   4%|4         | 198/4544 [00:00<00:16, 269.05it/s][A
+Records labeled       :   5%|4         | 225/4544 [00:00<00:16, 263.90it/s][ARelevant records found:  61%|######    | 23/38 [00:00<00:00, 28.60it/s]
+Records labeled       :   6%|5         | 252/4544 [00:00<00:16, 259.75it/s][A
+Records labeled       :   6%|6         | 280/4544 [00:01<00:16, 264.41it/s][A
+Records labeled       :   7%|6         | 307/4544 [00:01<00:15, 265.14it/s][ARelevant records found:  71%|#######1  | 27/38 [00:01<00:00, 21.78it/s]
+Records labeled       :   7%|7         | 334/4544 [00:01<00:16, 261.90it/s][ARelevant records found:  84%|########4 | 32/38 [00:01<00:00, 27.23it/s]
+Records labeled       :   8%|7         | 361/4544 [00:01<00:16, 257.58it/s][ARelevant records found:  95%|#########4| 36/38 [00:01<00:00, 25.49it/s]
+Records labeled       :   9%|8         | 387/4544 [00:01<00:16, 252.11it/s][A
+Records labeled       :   9%|9         | 413/4544 [00:01<00:16, 245.35it/s][A
+Records labeled       :  10%|9         | 438/4544 [00:01<00:17, 239.98it/s][A
+Records labeled       :  10%|#         | 463/4544 [00:01<00:17, 235.58it/s][A
+Records labeled       :  11%|#         | 487/4544 [00:01<00:17, 231.86it/s][A
+Records labeled       :  11%|#1        | 511/4544 [00:02<00:17, 225.45it/s][A
+Records labeled       :  12%|#1        | 534/4544 [00:02<00:18, 221.69it/s][A
+Records labeled       :  12%|#2        | 557/4544 [00:02<00:18, 217.83it/s][A
+Records labeled       :  13%|#2        | 579/4544 [00:02<00:18, 212.61it/s][ARelevant records found: 100%|##########| 38/38 [00:02<00:00, 15.07it/s]
+Records labeled       :  13%|#3        | 600/4544 [00:02<00:16, 243.55it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Sjard\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\asreview\__main__.py", line 95, in <module>
+    main()
+  File "C:\Users\Sjard\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\asreview\__main__.py", line 50, in main
+    _execute_entry_point(entry, sys.argv[2:])
+  File "C:\Users\Sjard\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\asreview\__main__.py", line 28, in _execute_entry_point
+    entry().execute(args)
+  File "C:\Users\Sjard\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\asreview\entry_points\simulate.py", line 221, in execute
+    shutil.rmtree(fp_tmp_simulation)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\shutil.py", line 629, in _rmtree_unsafe
+    _rmtree_unsafe(fullname, onerror)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\shutil.py", line 629, in _rmtree_unsafe
+    _rmtree_unsafe(fullname, onerror)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'output\\simulation\\van_de_Schoot_2018\\state_files\\sim_van_de_Schoot_2018_logistic_doc2vec_default_max_double.asreview.tmp\\reviews\\1c30300ebf904557ae6798333707f561\\results.sql'

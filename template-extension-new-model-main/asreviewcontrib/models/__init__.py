@@ -1,14 +1,79 @@
-from asreviewcontrib.models.alibaba import Alibaba
-from asreviewcontrib.models.fasttext import Fasttext
-from asreviewcontrib.models.bart import Bart
-
 from asreviewcontrib.models.tfidfrelu import TfidfRelu
 from asreviewcontrib.models.tfidfn import Tfidfn
 from asreviewcontrib.models.tfidfminmax import TfidfMinMax
-from asreviewcontrib.models.tfidflognorm import TfidfLogNormalization
-from asreviewcontrib.models.tfidfaddabsmin import TfidfAddAbsMin
+# from asreviewcontrib.models.tfidflognorm import TfidfLogNormalization
+
+# TF-IDF
+from asreviewcontrib.models.tfidf_absmin import Tfidf_absmin
 from asreviewcontrib.models.tfidfsigmoid import TfidfSigmoid
 from asreviewcontrib.models.tfidfcdf import Tfidfcdf
+from asreviewcontrib.models.tfidf_sqrt import Tfidf_sqrt
+# minmax
+from asreviewcontrib.models.tfidf_zscore_minmax import Tfidf_zscore_minmax
+from asreviewcontrib.models.tfidf_pareto_minmax import Tfidf_pareto_minmax
+from asreviewcontrib.models.tfidf_l2_normalize_minmax import Tfidf_l2_normalize_minmax
+# absmin
+from asreviewcontrib.models.tfidf_zscore_absmin import Tfidf_zscore_absmin
+from asreviewcontrib.models.tfidf_pareto_absmin import Tfidf_pareto_absmin
+from asreviewcontrib.models.tfidf_l2_normalize_absmin import Tfidf_l2_normalize_absmin
+# sqrt
+from asreviewcontrib.models.tfidf_zscore_sqrt import Tfidf_zscore_sqrt
+from asreviewcontrib.models.tfidf_pareto_sqrt import Tfidf_pareto_sqrt
+from asreviewcontrib.models.tfidf_l2_normalize_sqrt import Tfidf_l2_normalize_sqrt
+# cdf
+from asreviewcontrib.models.tfidf_zscore_cdf import Tfidf_zscore_cdf
+from asreviewcontrib.models.tfidf_pareto_cdf import Tfidf_pareto_cdf
+from asreviewcontrib.models.tfidf_l2_normalize_cdf import Tfidf_l2_normalize_cdf
+# sigmoid
+from asreviewcontrib.models.tfidf_zscore_sigmoid import Tfidf_zscore_sigmoid
+from asreviewcontrib.models.tfidf_pareto_sigmoid import Tfidf_pareto_sigmoid
+from asreviewcontrib.models.tfidf_l2_normalize_sigmoid import Tfidf_l2_normalize_sigmoid
+
+#Doc2Vec
+# minmax
+from asreviewcontrib.models.doc2vec_zscore_minmax import Doc2Vec_zscore_minmax
+from asreviewcontrib.models.doc2vec_pareto_minmax import Doc2Vec_pareto_minmax
+from asreviewcontrib.models.doc2vec_l2_normalize_minmax import Doc2Vec_l2_normalize_minmax
+# absmin
+from asreviewcontrib.models.doc2vec_zscore_absmin import Doc2Vec_zscore_absmin
+from asreviewcontrib.models.doc2vec_pareto_absmin import Doc2Vec_pareto_absmin
+from asreviewcontrib.models.doc2vec_l2_normalize_absmin import Doc2Vec_l2_normalize_absmin
+# sqrt
+from asreviewcontrib.models.doc2vec_zscore_sqrt import Doc2Vec_zscore_sqrt
+from asreviewcontrib.models.doc2vec_pareto_sqrt import Doc2Vec_pareto_sqrt
+from asreviewcontrib.models.doc2vec_l2_normalize_sqrt import Doc2Vec_l2_normalize_sqrt
+from asreviewcontrib.models.doc2vec_sqrt import Doc2Vec_sqrt
+# cdf
+from asreviewcontrib.models.doc2vec_zscore_cdf import Doc2Vec_zscore_cdf
+from asreviewcontrib.models.doc2vec_pareto_cdf import Doc2Vec_pareto_cdf
+from asreviewcontrib.models.doc2vec_l2_normalize_cdf import Doc2Vec_l2_normalize_cdf
+# sigmoid
+from asreviewcontrib.models.doc2vec_zscore_sigmoid import Doc2Vec_zscore_sigmoid
+from asreviewcontrib.models.doc2vec_pareto_sigmoid import Doc2Vec_pareto_sigmoid
+from asreviewcontrib.models.doc2vec_l2_normalize_sigmoid import Doc2Vec_l2_normalize_sigmoid
+
+#SBERT
+# minmax
+from asreviewcontrib.models.sbert_zscore_minmax import SBERT_zscore_minmax
+from asreviewcontrib.models.sbert_pareto_minmax import SBERT_pareto_minmax
+from asreviewcontrib.models.sbert_l2_normalize_minmax import SBERT_l2_normalize_minmax
+# absmin
+from asreviewcontrib.models.sbert_zscore_absmin import SBERT_zscore_absmin
+from asreviewcontrib.models.sbert_pareto_absmin import SBERT_pareto_absmin
+from asreviewcontrib.models.sbert_l2_normalize_absmin import SBERT_l2_normalize_absmin
+# sqrt
+from asreviewcontrib.models.sbert_zscore_sqrt import SBERT_zscore_sqrt
+from asreviewcontrib.models.sbert_pareto_sqrt import SBERT_pareto_sqrt
+from asreviewcontrib.models.sbert_l2_normalize_sqrt import SBERT_l2_normalize_sqrt
+from asreviewcontrib.models.sbert_sqrt import SBERT_sqrt
+# cdf
+from asreviewcontrib.models.sbert_zscore_cdf import SBERT_zscore_cdf
+from asreviewcontrib.models.sbert_pareto_cdf import SBERT_pareto_cdf
+from asreviewcontrib.models.sbert_l2_normalize_cdf import SBERT_l2_normalize_cdf
+# sigmoid
+from asreviewcontrib.models.sbert_zscore_sigmoid import SBERT_zscore_sigmoid
+from asreviewcontrib.models.sbert_pareto_sigmoid import SBERT_pareto_sigmoid
+from asreviewcontrib.models.sbert_l2_normalize_sigmoid import SBERT_l2_normalize_sigmoid
 
 from asreviewcontrib.models.doc2vec import Doc2Vec
 from asreviewcontrib.models.doc2vecaddabsmin import Doc2VecAddAbsMin
@@ -20,4 +85,5 @@ from asreviewcontrib.models.doc2vecSigmoid import Doc2VecSigmoid
 from asreviewcontrib.models.sbertminmax import SBERTMinMax
 from asreviewcontrib.models.sbertabsmin import SBERTabsmin
 from asreviewcontrib.models.sbertsigmoid import SBERTSigmoid
-from asreviewcontrib.models.sbertcdf import SBERTcdf
+from asreviewcontrib.models.sbert_cdf import SBERT_cdf
+from asreviewcontrib.models.sbert import SBERT

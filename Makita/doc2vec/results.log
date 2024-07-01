@@ -1,0 +1,6 @@
+Running classifier: logistic with feature extractor: doc2vec_default 
+Start Time: 22:54:37,42 
+Runtime for classifier logistic with feature extractor doc2vec_default: 150 seconds 
+Start Total Centiseconds: 8247742, End Total Centiseconds: 8262747, Difference in Seconds: 150 
+End Time: 22:57:07,47 
+############## The whole computation took 150 SECONDS or 2 MINUTES ###################### 

@@ -90,6 +90,7 @@ class SBERTMinMax(BaseFeatureExtraction):
         self.transformer_model = transformer_model
         self.is_pretrained_sbert = is_pretrained_sbert
         self.pooling_mode = pooling_mode
+        self.name = "SBERT_minmax"
 
     def transform(self, texts):
         _check_st()
@@ -112,7 +113,13 @@ class SBERTMinMax(BaseFeatureExtraction):
                 modules=[word_embedding_model, pooling_layer])
         print("Encoding texts using sbert, this may take a while...")
         X = model.encode(texts, show_progress_bar=True, device=device)
-        X = minmax(X, 0, 1)
+        X = minmax(X)
+        print("Adding embeddings")
+        if X.shape[0] > 0:
+            add_embeddings(X, self.name)
+        else:
+            print("############ Warning: X is empty, skipping add_embeddings ##########")
+        
         print(X)
 
         return X

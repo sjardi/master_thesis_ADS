@@ -91,7 +91,7 @@ class Doc2VecMinMax(BaseFeatureExtraction):
         Whether to train the word vectors using the skipgram method.
     """
 
-    name = "doc2vecminmax"
+    name = "doc2vec_minmax"
     label = "Doc2VecMinMax"
 
     def __init__(
@@ -124,6 +124,7 @@ class Doc2VecMinMax(BaseFeatureExtraction):
         self._model_dbow = None
         self.new_min_X = new_min_X
         self.new_max_X = new_max_X
+        self.name = "doc2vec_minmax"
 
     def fit(self, texts):
         # check is gensim is available
@@ -151,7 +152,7 @@ class Doc2VecMinMax(BaseFeatureExtraction):
             self.model_dbow = _train_model(corpus, **model_param, dm=0)
         else:
             self.model = _train_model(corpus, **model_param, dm=self.dm)
-            
+
     def transform(self, texts):
         # check is gensim is available
         _check_gensim()
@@ -166,9 +167,16 @@ class Doc2VecMinMax(BaseFeatureExtraction):
             X = np.concatenate((X_dm, X_dbow), axis=1)
         else:
             X = _transform_text(self.model, corpus)
-            
+        print("Executing minmax with doc2vec")
         X = minmax(X)
+        print("Adding embeddings")
+        if X.shape[0] > 0:
+            add_embeddings(X, self.name)
+        else:
+            print("############ Warning: X is empty, skipping add_embeddings ##########")
         
+
+
         return X
 
     def full_hyper_space(self):
@@ -176,7 +184,8 @@ class Doc2VecMinMax(BaseFeatureExtraction):
 
         eps = 1e-7
 
-        hyper_space, hyper_choices = super(Doc2VecMinMax, self).full_hyper_space()
+        hyper_space, hyper_choices = super(
+            Doc2VecMinMax, self).full_hyper_space()
         hyper_space.update(
             {
                 "fex_vector_size": hp.quniform("fex_vector_size", 31.5, 127.5 - eps, 8),

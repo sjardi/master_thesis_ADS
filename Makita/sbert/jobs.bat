@@ -30,44 +30,9 @@ python -m asreview wordcloud data\van_de_Schoot_2018.csv -o output\figures\wordc
 :: Simulate runs
 mkdir output\simulation\van_de_Schoot_2018\state_files
 
-
-:: Skipped nb + sbert + max model
-
-:: Classifier = nb, Feature extractor = sbertminmax, Query strategy = max, Balance strategy = double
-python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_sbertminmax_max_double.asreview --model nb --query_strategy max --feature_extraction sbertminmax --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
-python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_sbertminmax_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_nb_sbertminmax_max_double.json
-
-:: Classifier = nb, Feature extractor = sbertabsmin, Query strategy = max, Balance strategy = double
-python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_sbertabsmin_max_double.asreview --model nb --query_strategy max --feature_extraction sbertabsmin --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
-python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_sbertabsmin_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_nb_sbertabsmin_max_double.json
-
-:: Classifier = nb, Feature extractor = sbertsigmoid, Query strategy = max, Balance strategy = double
-python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_sbertsigmoid_max_double.asreview --model nb --query_strategy max --feature_extraction sbertsigmoid --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
-python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_sbertsigmoid_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_nb_sbertsigmoid_max_double.json
-
-:: Classifier = nb, Feature extractor = sbertcdf, Query strategy = max, Balance strategy = double
-python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_sbertcdf_max_double.asreview --model nb --query_strategy max --feature_extraction sbertcdf --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
-python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_sbertcdf_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_nb_sbertcdf_max_double.json
-
-:: Classifier = logistic, Feature extractor = sbert, Query strategy = max, Balance strategy = double
-python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_sbert_max_double.asreview --model logistic --query_strategy max --feature_extraction sbert --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
-python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_sbert_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_logistic_sbert_max_double.json
-
-:: Classifier = logistic, Feature extractor = sbertminmax, Query strategy = max, Balance strategy = double
-python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_sbertminmax_max_double.asreview --model logistic --query_strategy max --feature_extraction sbertminmax --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
-python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_sbertminmax_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_logistic_sbertminmax_max_double.json
-
-:: Classifier = logistic, Feature extractor = sbertabsmin, Query strategy = max, Balance strategy = double
-python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_sbertabsmin_max_double.asreview --model logistic --query_strategy max --feature_extraction sbertabsmin --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
-python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_sbertabsmin_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_logistic_sbertabsmin_max_double.json
-
-:: Classifier = logistic, Feature extractor = sbertsigmoid, Query strategy = max, Balance strategy = double
-python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_sbertsigmoid_max_double.asreview --model logistic --query_strategy max --feature_extraction sbertsigmoid --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
-python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_sbertsigmoid_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_logistic_sbertsigmoid_max_double.json
-
-:: Classifier = logistic, Feature extractor = sbertcdf, Query strategy = max, Balance strategy = double
-python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_sbertcdf_max_double.asreview --model logistic --query_strategy max --feature_extraction sbertcdf --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
-python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_sbertcdf_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_logistic_sbertcdf_max_double.json
+:: Classifier = nb, Feature extractor = sbert_l2_normalize_minmax, Query strategy = max, Balance strategy = double
+python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_sbert_l2_normalize_minmax_max_double.asreview --model nb --query_strategy max --feature_extraction sbert_l2_normalize_minmax --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
+python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_sbert_l2_normalize_minmax_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_nb_sbert_l2_normalize_minmax_max_double.json
 
 :: Generate plot and tables for dataset
 python scripts\get_plot.py -s output\simulation\van_de_Schoot_2018\state_files\ -o output\figures\plot_recall_sim_van_de_Schoot_2018.png --show_legend model

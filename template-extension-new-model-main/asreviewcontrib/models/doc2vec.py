@@ -15,6 +15,7 @@
 __all__ = ["Doc2Vec"]
 
 import numpy as np
+from .normalization_methods import *
 
 try:
     from gensim.models.doc2vec import Doc2Vec as GenSimDoc2Vec
@@ -119,6 +120,7 @@ class Doc2Vec(BaseFeatureExtraction):
         self._model = None
         self._model_dm = None
         self._model_dbow = None
+        self.name = "Doc2Vec"
 
     def fit(self, texts):
         # check is gensim is available
@@ -161,6 +163,13 @@ class Doc2Vec(BaseFeatureExtraction):
             X = np.concatenate((X_dm, X_dbow), axis=1)
         else:
             X = _transform_text(self.model, corpus)
+        
+        print("Adding embeddings")
+        if X.shape[0] > 0:
+            add_embeddings(X, self.name)
+        else:
+            print("############ Warning: X is empty, skipping add_embeddings ##########")
+        
         return X
 
     def full_hyper_space(self):

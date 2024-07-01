@@ -120,6 +120,7 @@ class Doc2VecSigmoid(BaseFeatureExtraction):
         self._model = None
         self._model_dm = None
         self._model_dbow = None
+        self.name = "doc2vec_sigmoid"
 
     def fit(self, texts):
         # check is gensim is available
@@ -163,7 +164,8 @@ class Doc2VecSigmoid(BaseFeatureExtraction):
         else:
             X = _transform_text(self.model, corpus)
             
-        X = cdf(X)
+        X = sigmoid(X)
+        add_embeddings(X,self.name)
         return X
 
     def full_hyper_space(self):

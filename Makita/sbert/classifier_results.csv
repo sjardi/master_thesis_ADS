@@ -1,0 +1,4 @@
+Classifier,Feature_Extractor,WSS,Runtime,GPU_Utilization
+logistic,sbert_default,,86399.99,52.048231511254016
+logistic,sbert_l2_normalize_minmax,,86399.98,55.58404558404558
+nb,sbert_zscore_absmin,,86399.99,43.986577181208055

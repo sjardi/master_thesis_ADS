@@ -1,0 +1,336 @@
+Combination: logistic_doc2vec_minmax
+Runtime: 182.87 seconds
+GPU Utilization: 0.01639344262295082%
+
+Combination: logistic_doc2vec
+Runtime: 174.43 seconds
+GPU Utilization: 0.0%
+
+Combination: logistic_doc2vecaddabsmin
+Runtime: 186.56 seconds
+GPU Utilization: 0.010752688172043012%
+
+Combination: logistic_doc2vec_cdf
+Runtime: 179.09 seconds
+GPU Utilization: 0.0%
+
+Combination: logistic_doc2vec_sigmoid
+Runtime: 180.93 seconds
+GPU Utilization: 0.016574585635359115%
+
+Combination: logistic_doc2vec_zscore_minmax
+Runtime: 182.38 seconds
+GPU Utilization: 0.02197802197802198%
+
+Combination: logistic_doc2vec_pareto_minmax
+Runtime: 210.97 seconds
+GPU Utilization: 0.018957345971563982%
+
+Combination: logistic_doc2vec_l2_normalize_minmax
+Runtime: 228.8 seconds
+GPU Utilization: 0.0%
+
+Combination: logistic_doc2vec_zscore_absmin
+Runtime: 218.27 seconds
+GPU Utilization: 0.009174311926605505%
+
+Combination: logistic_doc2vec_pareto_absmin
+Runtime: 220.91 seconds
+GPU Utilization: 0.00904977375565611%
+
+Combination: logistic_doc2vec_l2_normalize_absmin
+Runtime: 364.97 seconds
+GPU Utilization: 0.0%
+
+Combination: logistic_doc2vec_zscore_sqrt
+Runtime: 218.54 seconds
+GPU Utilization: 0.018018018018018018%
+
+Combination: logistic_doc2vec_pareto_sqrt
+Runtime: 217.83 seconds
+GPU Utilization: 0.009216589861751152%
+
+Combination: logistic_doc2vec_l2_normalize_sqrt
+Runtime: 219.94 seconds
+GPU Utilization: 0.00909090909090909%
+
+Combination: logistic_doc2vec_zscore_cdf
+Runtime: 220.92 seconds
+GPU Utilization: 0.01809954751131222%
+
+Combination: logistic_doc2vec_pareto_cdf
+Runtime: 225.08 seconds
+GPU Utilization: 0.013333333333333334%
+
+Combination: logistic_doc2vec_l2_normalize_cdf
+Runtime: 221.86 seconds
+GPU Utilization: 0.0%
+
+Combination: logistic_doc2vec_zscore_sigmoid
+Runtime: 223.88 seconds
+GPU Utilization: 0.004464285714285714%
+
+Combination: logistic_doc2vec_pareto_sigmoid
+Runtime: 225.52 seconds
+GPU Utilization: 0.0%
+
+Combination: logistic_doc2vec_l2_normalize_sigmoid
+Runtime: 984.92 seconds
+GPU Utilization: 0.0%
+
+Combination: logistic_doc2vec_sqrt
+Runtime: 104.84 seconds
+GPU Utilization: 0.0%
+
+Combination: nb_doc2vec_minmax
+Runtime: 226.78 seconds
+GPU Utilization: 0.00881057268722467%
+
+Combination: nb_doc2vec
+Runtime: 78.56 seconds
+GPU Utilization: 0.0%
+
+Combination: nb_doc2vecaddabsmin
+Runtime: 220.32 seconds
+GPU Utilization: 0.0%
+
+Combination: nb_doc2vec_cdf
+Runtime: 223.55 seconds
+GPU Utilization: 0.008928571428571428%
+
+Combination: nb_doc2vec_sigmoid
+Runtime: 222.9 seconds
+GPU Utilization: 0.0%
+
+Combination: nb_doc2vec_zscore_minmax
+Runtime: 329.55 seconds
+GPU Utilization: 0.0030303030303030303%
+
+Combination: nb_doc2vec_pareto_minmax
+Runtime: 220.84 seconds
+GPU Utilization: 0.0%
+
+Combination: nb_doc2vec_l2_normalize_minmax
+Runtime: 222.29 seconds
+GPU Utilization: 0.017857142857142856%
+
+Combination: nb_doc2vec_zscore_absmin
+Runtime: 222.75 seconds
+GPU Utilization: 0.0%
+
+Combination: nb_doc2vec_pareto_absmin
+Runtime: 224.55 seconds
+GPU Utilization: 0.008888888888888889%
+
+Combination: nb_doc2vec_l2_normalize_absmin
+Runtime: 222.69 seconds
+GPU Utilization: 0.013452914798206279%
+
+Combination: nb_doc2vec_zscore_sqrt
+Runtime: 214.85 seconds
+GPU Utilization: 0.023148148148148147%
+
+Combination: nb_doc2vec_pareto_sqrt
+Runtime: 217.99 seconds
+GPU Utilization: 0.0%
+
+Combination: nb_doc2vec_l2_normalize_sqrt
+Runtime: 212.21 seconds
+GPU Utilization: 0.0%
+
+Combination: nb_doc2vec_zscore_cdf
+Runtime: 220.02 seconds
+GPU Utilization: 0.0%
+
+Combination: nb_doc2vec_pareto_cdf
+Runtime: 220.38 seconds
+GPU Utilization: 0.00909090909090909%
+
+Combination: nb_doc2vec_l2_normalize_cdf
+Runtime: 220.36 seconds
+GPU Utilization: 0.0%
+
+Combination: nb_doc2vec_zscore_sigmoid
+Runtime: 222.8 seconds
+GPU Utilization: 0.0%
+
+Combination: nb_doc2vec_pareto_sigmoid
+Runtime: 224.64 seconds
+GPU Utilization: 0.0%
+
+Combination: nb_doc2vec_l2_normalize_sigmoid
+Runtime: 221.52 seconds
+GPU Utilization: 0.0%
+
+Combination: nb_doc2vec_sqrt
+Runtime: 104.77 seconds
+GPU Utilization: 0.0%
+
+Combination: logistic_doc2vec_minmax
+Runtime: 182.87 seconds
+GPU Utilization: 0.02%
+
+Combination: logistic_doc2vec
+Runtime: 174.43 seconds
+GPU Utilization: 0.00%
+
+Combination: logistic_doc2vecaddabsmin
+Runtime: 186.56 seconds
+GPU Utilization: 0.01%
+
+Combination: logistic_doc2vec_cdf
+Runtime: 179.09 seconds
+GPU Utilization: 0.00%
+
+Combination: logistic_doc2vec_sigmoid
+Runtime: 180.93 seconds
+GPU Utilization: 0.02%
+
+Combination: logistic_doc2vec_zscore_minmax
+Runtime: 182.38 seconds
+GPU Utilization: 0.02%
+
+Combination: logistic_doc2vec_pareto_minmax
+Runtime: 210.97 seconds
+GPU Utilization: 0.02%
+
+Combination: logistic_doc2vec_l2_normalize_minmax
+Runtime: 228.8 seconds
+GPU Utilization: 0.00%
+
+Combination: logistic_doc2vec_zscore_absmin
+Runtime: 218.27 seconds
+GPU Utilization: 0.01%
+
+Combination: logistic_doc2vec_pareto_absmin
+Runtime: 220.91 seconds
+GPU Utilization: 0.01%
+
+Combination: logistic_doc2vec_l2_normalize_absmin
+Runtime: 364.97 seconds
+GPU Utilization: 0.00%
+
+Combination: logistic_doc2vec_zscore_sqrt
+Runtime: 218.54 seconds
+GPU Utilization: 0.02%
+
+Combination: logistic_doc2vec_pareto_sqrt
+Runtime: 217.83 seconds
+GPU Utilization: 0.01%
+
+Combination: logistic_doc2vec_l2_normalize_sqrt
+Runtime: 219.94 seconds
+GPU Utilization: 0.01%
+
+Combination: logistic_doc2vec_zscore_cdf
+Runtime: 220.92 seconds
+GPU Utilization: 0.02%
+
+Combination: logistic_doc2vec_pareto_cdf
+Runtime: 225.08 seconds
+GPU Utilization: 0.01%
+
+Combination: logistic_doc2vec_l2_normalize_cdf
+Runtime: 221.86 seconds
+GPU Utilization: 0.00%
+
+Combination: logistic_doc2vec_zscore_sigmoid
+Runtime: 223.88 seconds
+GPU Utilization: 0.00%
+
+Combination: logistic_doc2vec_pareto_sigmoid
+Runtime: 225.52 seconds
+GPU Utilization: 0.00%
+
+Combination: logistic_doc2vec_l2_normalize_sigmoid
+Runtime: 984.92 seconds
+GPU Utilization: 0.00%
+
+Combination: logistic_doc2vec_sqrt
+Runtime: 104.84 seconds
+GPU Utilization: 0.00%
+
+Combination: nb_doc2vec_minmax
+Runtime: 226.78 seconds
+GPU Utilization: 0.01%
+
+Combination: nb_doc2vec
+Runtime: 78.56 seconds
+GPU Utilization: 0.00%
+
+Combination: nb_doc2vecaddabsmin
+Runtime: 220.32 seconds
+GPU Utilization: 0.00%
+
+Combination: nb_doc2vec_cdf
+Runtime: 223.55 seconds
+GPU Utilization: 0.01%
+
+Combination: nb_doc2vec_sigmoid
+Runtime: 222.9 seconds
+GPU Utilization: 0.00%
+
+Combination: nb_doc2vec_zscore_minmax
+Runtime: 329.55 seconds
+GPU Utilization: 0.00%
+
+Combination: nb_doc2vec_pareto_minmax
+Runtime: 220.84 seconds
+GPU Utilization: 0.00%
+
+Combination: nb_doc2vec_l2_normalize_minmax
+Runtime: 222.29 seconds
+GPU Utilization: 0.02%
+
+Combination: nb_doc2vec_zscore_absmin
+Runtime: 222.75 seconds
+GPU Utilization: 0.00%
+
+Combination: nb_doc2vec_pareto_absmin
+Runtime: 224.55 seconds
+GPU Utilization: 0.01%
+
+Combination: nb_doc2vec_l2_normalize_absmin
+Runtime: 222.69 seconds
+GPU Utilization: 0.01%
+
+Combination: nb_doc2vec_zscore_sqrt
+Runtime: 214.85 seconds
+GPU Utilization: 0.02%
+
+Combination: nb_doc2vec_pareto_sqrt
+Runtime: 217.99 seconds
+GPU Utilization: 0.00%
+
+Combination: nb_doc2vec_l2_normalize_sqrt
+Runtime: 212.21 seconds
+GPU Utilization: 0.00%
+
+Combination: nb_doc2vec_zscore_cdf
+Runtime: 220.02 seconds
+GPU Utilization: 0.00%
+
+Combination: nb_doc2vec_pareto_cdf
+Runtime: 220.38 seconds
+GPU Utilization: 0.01%
+
+Combination: nb_doc2vec_l2_normalize_cdf
+Runtime: 220.36 seconds
+GPU Utilization: 0.00%
+
+Combination: nb_doc2vec_zscore_sigmoid
+Runtime: 222.8 seconds
+GPU Utilization: 0.00%
+
+Combination: nb_doc2vec_pareto_sigmoid
+Runtime: 224.64 seconds
+GPU Utilization: 0.00%
+
+Combination: nb_doc2vec_l2_normalize_sigmoid
+Runtime: 221.52 seconds
+GPU Utilization: 0.00%
+
+Combination: nb_doc2vec_sqrt
+Runtime: 104.77 seconds
+GPU Utilization: 0.00%
+

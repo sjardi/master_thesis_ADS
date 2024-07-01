@@ -1,0 +1,36 @@
+Running classifier: logistic with feature extractor: sbert_default 
+Start Time:  2:02:32,31 
+Runtime for classifier logistic with feature extractor sbert_default: 250 seconds 
+Start Total Centiseconds: 735231, End Total Centiseconds: 760298, Difference in Seconds: 250 
+End Time:  2:06:42,98 
+############## The whole computation took 250 SECONDS or 4 MINUTES ###################### 
+Running classifier: logistic with feature extractor: sbert_zscore_absmin 
+Start Time:  2:06:42,99 
+Runtime for classifier logistic with feature extractor sbert_zscore_absmin: 257 seconds 
+Start Total Centiseconds: 760299, End Total Centiseconds: 786040, Difference in Seconds: 257 
+End Time:  2:11:08,40 
+############## The whole computation took 257 SECONDS or 4 MINUTES ###################### 
+Running classifier: logistic with feature extractor: sbert_l2_normalize_minmax 
+Start Time:  2:11:08,41 
+Runtime for classifier logistic with feature extractor sbert_l2_normalize_minmax: 284 seconds 
+Start Total Centiseconds: 786041, End Total Centiseconds: 814477, Difference in Seconds: 284 
+End Time:  2:15:44,77 
+############## The whole computation took 284 SECONDS or 4 MINUTES ###################### 
+Running classifier: nb with feature extractor: sbert_default 
+Start Time:  2:15:44,79 
+Runtime for classifier nb with feature extractor sbert_default: 187 seconds 
+Start Total Centiseconds: 814479, End Total Centiseconds: 833266, Difference in Seconds: 187 
+End Time:  2:18:52,66 
+############## The whole computation took 187 SECONDS or 3 MINUTES ###################### 
+Running classifier: nb with feature extractor: sbert_zscore_absmin 
+Start Time:  2:18:52,68 
+Runtime for classifier nb with feature extractor sbert_zscore_absmin: 215 seconds 
+Start Total Centiseconds: 833268, End Total Centiseconds: 854830, Difference in Seconds: 215 
+End Time:  2:22:28,30 
+############## The whole computation took 215 SECONDS or 3 MINUTES ###################### 
+Running classifier: nb with feature extractor: sbert_l2_normalize_minmax 
+Start Time:  2:22:28,31 
+Runtime for classifier nb with feature extractor sbert_l2_normalize_minmax: 214 seconds 
+Start Total Centiseconds: 854831, End Total Centiseconds: 876253, Difference in Seconds: 214 
+End Time:  2:26:02,53 
+############## The whole computation took 214 SECONDS or 3 MINUTES ###################### 

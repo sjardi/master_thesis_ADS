@@ -2,7 +2,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from asreview.models.feature_extraction.base import BaseFeatureExtraction
 import numpy as np
 from scipy.sparse import csr_matrix
-from .normalization_methods import relu
+from .normalization_methods import *
 
 class TfidfRelu(BaseFeatureExtraction):
     name = "tfidfrelu"

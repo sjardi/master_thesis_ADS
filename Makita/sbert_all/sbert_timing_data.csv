@@ -1,0 +1,41 @@
+Combination,Time Taken (s)
+z-score - minmax,249.45
+pareto - minmax,219.03
+l2 normalize - minmax,260.23
+z-score - absmin,340.22
+pareto - absmin,239.32
+l2 normalize - absmin,213.44
+z-score - sqrt,216.35
+pareto - sqrt,226.89
+l2 normalize - sqrt,244.16
+z-score - cdf,238.42
+pareto - cdf,239.42
+l2 normalize - cdf,236.28
+z-score - sigmoid,246.26
+pareto - sigmoid,217.87
+l2 normalize - sigmoid,211.12
+sbertminmax,180.09
+sbertabsmin,213.07
+sbertsigmoid,216.05
+cdf,233.03
+sbert,210.2
+z-score - minmax,199.79
+pareto - minmax,200.57
+l2 normalize - minmax,200.94
+z-score - absmin,202.51
+pareto - absmin,206.87
+l2 normalize - absmin,202.75
+z-score - sqrt,214.11
+pareto - sqrt,213.83
+l2 normalize - sqrt,213.58
+z-score - cdf,195.28
+pareto - cdf,196.57
+l2 normalize - cdf,194.44
+z-score - sigmoid,212.23
+pareto - sigmoid,208.76
+l2 normalize - sigmoid,209.92
+sbertminmax,183.39
+sbertabsmin,203.95
+sbertsigmoid,207.05
+cdf,192.12
+sbert,40.32

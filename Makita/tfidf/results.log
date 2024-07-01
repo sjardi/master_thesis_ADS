@@ -1,0 +1,108 @@
+Running classifier: logistic with feature extractor: tfidfsigmoid 
+Start Time: 14:00:45,07 
+Runtime for classifier logistic with feature extractor tfidfsigmoid: 731 seconds 
+Start Total Centiseconds: 5044507, End Total Centiseconds: 5117703, Difference in Seconds: 731 
+End Time: 14:12:57,03 
+############## The whole computation took 731 SECONDS or 12 MINUTES ###################### 
+Running classifier: logistic with feature extractor: tfidfcdf 
+Start Time: 14:12:57,04 
+Runtime for classifier logistic with feature extractor tfidfcdf: 1500 seconds 
+Start Total Centiseconds: 5117704, End Total Centiseconds: 5267711, Difference in Seconds: 1500 
+End Time: 14:37:57,11 
+############## The whole computation took 1500 SECONDS or 25 MINUTES ###################### 
+Running classifier: logistic with feature extractor: tfidf_zscore_absmin 
+Start Time: 14:37:57,12 
+Runtime for classifier logistic with feature extractor tfidf_zscore_absmin: 1113 seconds 
+Start Total Centiseconds: 5267712, End Total Centiseconds: 5379063, Difference in Seconds: 1113 
+End Time: 14:56:30,63 
+############## The whole computation took 1113 SECONDS or 18 MINUTES ###################### 
+Running classifier: logistic with feature extractor: tfidf_pareto_absmin 
+Start Time: 14:56:30,65 
+Runtime for classifier logistic with feature extractor tfidf_pareto_absmin: 851 seconds 
+Start Total Centiseconds: 5379065, End Total Centiseconds: 5464222, Difference in Seconds: 851 
+End Time: 15:10:42,22 
+############## The whole computation took 851 SECONDS or 14 MINUTES ###################### 
+Running classifier: logistic with feature extractor: tfidf_zscore_cdf 
+Start Time: 15:10:42,23 
+Runtime for classifier logistic with feature extractor tfidf_zscore_cdf: 1438 seconds 
+Start Total Centiseconds: 5464223, End Total Centiseconds: 5608060, Difference in Seconds: 1438 
+End Time: 15:34:40,60 
+############## The whole computation took 1438 SECONDS or 23 MINUTES ###################### 
+Running classifier: logistic with feature extractor: tfidf_pareto_cdf 
+Start Time: 15:34:40,61 
+Runtime for classifier logistic with feature extractor tfidf_pareto_cdf: 1443 seconds 
+Start Total Centiseconds: 5608061, End Total Centiseconds: 5752380, Difference in Seconds: 1443 
+End Time: 15:58:43,80 
+############## The whole computation took 1443 SECONDS or 24 MINUTES ###################### 
+Running classifier: logistic with feature extractor: tfidf_l2_normalize_cdf 
+Start Time: 15:58:43,82 
+Runtime for classifier logistic with feature extractor tfidf_l2_normalize_cdf: 1636 seconds 
+Start Total Centiseconds: 5752382, End Total Centiseconds: 5915995, Difference in Seconds: 1636 
+End Time: 16:25:59,95 
+############## The whole computation took 1636 SECONDS or 27 MINUTES ###################### 
+Running classifier: logistic with feature extractor: tfidf_zscore_sigmoid 
+Start Time: 16:25:59,97 
+Runtime for classifier logistic with feature extractor tfidf_zscore_sigmoid: 1564 seconds 
+Start Total Centiseconds: 5915997, End Total Centiseconds: 6072478, Difference in Seconds: 1564 
+End Time: 16:52:04,78 
+############## The whole computation took 1564 SECONDS or 26 MINUTES ###################### 
+Running classifier: logistic with feature extractor: tfidf_pareto_sigmoid 
+Start Time: 16:52:04,80 
+Runtime for classifier logistic with feature extractor tfidf_pareto_sigmoid: 85 seconds 
+Start Total Centiseconds: 6072480, End Total Centiseconds: 6081027, Difference in Seconds: 85 
+End Time: 16:53:30,27 
+############## The whole computation took 85 SECONDS or 1 MINUTES ###################### 
+Running classifier: nb with feature extractor: tfidfsigmoid 
+Start Time: 16:53:30,28 
+Runtime for classifier nb with feature extractor tfidfsigmoid: 86 seconds 
+Start Total Centiseconds: 6081028, End Total Centiseconds: 6089650, Difference in Seconds: 86 
+End Time: 16:54:56,50 
+############## The whole computation took 86 SECONDS or 1 MINUTES ###################### 
+Running classifier: nb with feature extractor: tfidfcdf 
+Start Time: 16:54:56,51 
+Runtime for classifier nb with feature extractor tfidfcdf: 89 seconds 
+Start Total Centiseconds: 6089651, End Total Centiseconds: 6098562, Difference in Seconds: 89 
+End Time: 16:56:25,62 
+############## The whole computation took 89 SECONDS or 1 MINUTES ###################### 
+Running classifier: nb with feature extractor: tfidf_zscore_absmin 
+Start Time: 16:56:25,63 
+Runtime for classifier nb with feature extractor tfidf_zscore_absmin: 1776 seconds 
+Start Total Centiseconds: 6098563, End Total Centiseconds: 6276259, Difference in Seconds: 1776 
+End Time: 17:26:02,59 
+############## The whole computation took 1776 SECONDS or 29 MINUTES ###################### 
+Running classifier: nb with feature extractor: tfidf_pareto_absmin 
+Start Time: 17:26:02,61 
+Runtime for classifier nb with feature extractor tfidf_pareto_absmin: 164 seconds 
+Start Total Centiseconds: 6276261, End Total Centiseconds: 6292687, Difference in Seconds: 164 
+End Time: 17:28:46,87 
+############## The whole computation took 164 SECONDS or 2 MINUTES ###################### 
+Running classifier: nb with feature extractor: tfidf_zscore_cdf 
+Start Time: 17:28:46,89 
+Runtime for classifier nb with feature extractor tfidf_zscore_cdf: 80 seconds 
+Start Total Centiseconds: 6292689, End Total Centiseconds: 6300737, Difference in Seconds: 80 
+End Time: 17:30:07,37 
+############## The whole computation took 80 SECONDS or 1 MINUTES ###################### 
+Running classifier: nb with feature extractor: tfidf_pareto_cdf 
+Start Time: 17:30:07,38 
+Runtime for classifier nb with feature extractor tfidf_pareto_cdf: 79 seconds 
+Start Total Centiseconds: 6300738, End Total Centiseconds: 6308735, Difference in Seconds: 79 
+End Time: 17:31:27,35 
+############## The whole computation took 79 SECONDS or 1 MINUTES ###################### 
+Running classifier: nb with feature extractor: tfidf_l2_normalize_cdf 
+Start Time: 17:31:27,37 
+Runtime for classifier nb with feature extractor tfidf_l2_normalize_cdf: 79 seconds 
+Start Total Centiseconds: 6308737, End Total Centiseconds: 6316679, Difference in Seconds: 79 
+End Time: 17:32:46,79 
+############## The whole computation took 79 SECONDS or 1 MINUTES ###################### 
+Running classifier: nb with feature extractor: tfidf_zscore_sigmoid 
+Start Time: 17:32:46,81 
+Runtime for classifier nb with feature extractor tfidf_zscore_sigmoid: 80 seconds 
+Start Total Centiseconds: 6316681, End Total Centiseconds: 6324714, Difference in Seconds: 80 
+End Time: 17:34:07,14 
+############## The whole computation took 80 SECONDS or 1 MINUTES ###################### 
+Running classifier: nb with feature extractor: tfidf_pareto_sigmoid 
+Start Time: 17:34:07,16 
+Runtime for classifier nb with feature extractor tfidf_pareto_sigmoid: 79 seconds 
+Start Total Centiseconds: 6324716, End Total Centiseconds: 6332700, Difference in Seconds: 79 
+End Time: 17:35:27,08 
+############## The whole computation took 79 SECONDS or 1 MINUTES ###################### 

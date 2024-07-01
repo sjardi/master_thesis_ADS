@@ -30,53 +30,9 @@ python -m asreview wordcloud data\van_de_Schoot_2018.csv -o output\figures\wordc
 :: Simulate runs
 mkdir output\simulation\van_de_Schoot_2018\state_files
 
-:: Classifier = nb, Feature extractor = tfidfrelu, Query strategy = max, Balance strategy = double
-python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_tfidfrelu_max_double.asreview --model nb --query_strategy max --feature_extraction tfidfrelu --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
-python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_tfidfrelu_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_nb_tfidfrelu_max_double.json
-
-:: Classifier = nb, Feature extractor = tfidf, Query strategy = max, Balance strategy = double
-python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_tfidf_max_double.asreview --model nb --query_strategy max --feature_extraction tfidf --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
-python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_tfidf_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_nb_tfidf_max_double.json
-
-:: Classifier = nb, Feature extractor = tfidfsigmoid, Query strategy = max, Balance strategy = double
-python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_tfidfsigmoid_max_double.asreview --model nb --query_strategy max --feature_extraction tfidfsigmoid --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
-python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_tfidfsigmoid_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_nb_tfidfsigmoid_max_double.json
-
-:: Classifier = nb, Feature extractor = tfidfminmax, Query strategy = max, Balance strategy = double
-python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_tfidfminmax_max_double.asreview --model nb --query_strategy max --feature_extraction tfidfminmax --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
-python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_tfidfminmax_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_nb_tfidfminmax_max_double.json
-
-:: Classifier = nb, Feature extractor = tfidfaddabsmin, Query strategy = max, Balance strategy = double
-python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_tfidfaddabsmin_max_double.asreview --model nb --query_strategy max --feature_extraction tfidfaddabsmin --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
-python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_tfidfaddabsmin_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_nb_tfidfaddabsmin_max_double.json
-
-:: Classifier = nb, Feature extractor = tfidfcdf, Query strategy = max, Balance strategy = double
-python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_tfidfcdf_max_double.asreview --model nb --query_strategy max --feature_extraction tfidfcdf --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
-python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_tfidfcdf_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_nb_tfidfcdf_max_double.json
-
-:: Classifier = logistic, Feature extractor = tfidfrelu, Query strategy = max, Balance strategy = double
-python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_tfidfrelu_max_double.asreview --model logistic --query_strategy max --feature_extraction tfidfrelu --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
-python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_tfidfrelu_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_logistic_tfidfrelu_max_double.json
-
-:: Classifier = logistic, Feature extractor = tfidf, Query strategy = max, Balance strategy = double
-python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_tfidf_max_double.asreview --model logistic --query_strategy max --feature_extraction tfidf --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
-python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_tfidf_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_logistic_tfidf_max_double.json
-
-:: Classifier = logistic, Feature extractor = tfidfsigmoid, Query strategy = max, Balance strategy = double
-python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_tfidfsigmoid_max_double.asreview --model logistic --query_strategy max --feature_extraction tfidfsigmoid --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
-python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_tfidfsigmoid_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_logistic_tfidfsigmoid_max_double.json
-
-:: Classifier = logistic, Feature extractor = tfidfminmax, Query strategy = max, Balance strategy = double
-python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_tfidfminmax_max_double.asreview --model logistic --query_strategy max --feature_extraction tfidfminmax --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
-python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_tfidfminmax_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_logistic_tfidfminmax_max_double.json
-
-:: Classifier = logistic, Feature extractor = tfidfaddabsmin, Query strategy = max, Balance strategy = double
-python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_tfidfaddabsmin_max_double.asreview --model logistic --query_strategy max --feature_extraction tfidfaddabsmin --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
-python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_tfidfaddabsmin_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_logistic_tfidfaddabsmin_max_double.json
-
-:: Classifier = logistic, Feature extractor = tfidfcdf, Query strategy = max, Balance strategy = double
-python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_tfidfcdf_max_double.asreview --model logistic --query_strategy max --feature_extraction tfidfcdf --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
-python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_logistic_tfidfcdf_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_logistic_tfidfcdf_max_double.json
+:: Classifier = nb, Feature extractor = tfidf_pareto_sigmoid, Query strategy = max, Balance strategy = double
+python -m asreview simulate data\van_de_Schoot_2018.csv -s output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_tfidf_pareto_sigmoid_max_double.asreview --model nb --query_strategy max --feature_extraction tfidf_pareto_sigmoid --init_seed 535 --seed 165 -q max -b double --n_instances 1 --stop_if min
+python -m asreview metrics output\simulation\van_de_Schoot_2018\state_files\sim_van_de_Schoot_2018_nb_tfidf_pareto_sigmoid_max_double.asreview -o output\simulation\van_de_Schoot_2018\metrics\metrics_sim_van_de_Schoot_2018_nb_tfidf_pareto_sigmoid_max_double.json
 
 :: Generate plot and tables for dataset
 python scripts\get_plot.py -s output\simulation\van_de_Schoot_2018\state_files\ -o output\figures\plot_recall_sim_van_de_Schoot_2018.png --show_legend model

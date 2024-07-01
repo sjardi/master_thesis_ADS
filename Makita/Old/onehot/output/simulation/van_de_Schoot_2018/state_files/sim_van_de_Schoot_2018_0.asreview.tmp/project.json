@@ -1,1 +1,0 @@
-{"version": "1.6.1", "id": "sim_van_de_Schoot_2018_0", "mode": "simulate", "name": "sim_van_de_Schoot_2018_0", "description": "Simulation created via ASReview via command line interface", "authors": null, "created_at_unix": 1713918488, "datetimeCreated": "2024-04-24 02:28:08.549257", "reviews": [], "feature_matrices": [], "dataset_path": "van_de_Schoot_2018.csv"}

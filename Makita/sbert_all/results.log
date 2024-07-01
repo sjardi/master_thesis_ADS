@@ -1,0 +1,62 @@
+Running classifier: logistic with feature extractor: sbert_zscore_minmax 
+Start Time:  3:46:58,07 
+Runtime for classifier logistic with feature extractor sbert_zscore_minmax: 225 seconds 
+Start Total Centiseconds: 1361807, End Total Centiseconds: 1384314, Difference in Seconds: 225 
+End Time:  3:50:43,14 
+############## The whole computation took 225 SECONDS or 3 MINUTES ###################### 
+Running classifier: logistic with feature extractor: sbert_pareto_minmax 
+Start Time:  3:50:43,15 
+Runtime for classifier logistic with feature extractor sbert_pareto_minmax: 223 seconds 
+Start Total Centiseconds: 1384315, End Total Centiseconds: 1406658, Difference in Seconds: 223 
+End Time:  3:54:26,58 
+############## The whole computation took 223 SECONDS or 3 MINUTES ###################### 
+Running classifier: logistic with feature extractor: sbert_l2_normalize_minmax 
+Start Time:  3:54:26,59 
+Runtime for classifier logistic with feature extractor sbert_l2_normalize_minmax: 213 seconds 
+Start Total Centiseconds: 1406659, End Total Centiseconds: 1428001, Difference in Seconds: 213 
+End Time:  3:58:09,01 
+############## The whole computation took 213 SECONDS or 3 MINUTES ###################### 
+Running classifier: logistic with feature extractor: sbert_zscore_absmin 
+Start Time:  3:58:09,03 
+Runtime for classifier logistic with feature extractor sbert_zscore_absmin: 275 seconds 
+Start Total Centiseconds: 1428003, End Total Centiseconds: 1455541, Difference in Seconds: 275 
+End Time:  4:02:35,41 
+############## The whole computation took 275 SECONDS or 4 MINUTES ###################### 
+Running classifier: logistic with feature extractor: sbert_pareto_absmin 
+Start Time:  4:02:35,42 
+Runtime for classifier logistic with feature extractor sbert_pareto_absmin: 244 seconds 
+Start Total Centiseconds: 1455542, End Total Centiseconds: 1480003, Difference in Seconds: 244 
+End Time:  4:06:40,03 
+############## The whole computation took 244 SECONDS or 4 MINUTES ###################### 
+Running classifier: logistic with feature extractor: sbert_l2_normalize_absmin 
+Start Time:  4:06:40,05 
+Runtime for classifier logistic with feature extractor sbert_l2_normalize_absmin: 240 seconds 
+Start Total Centiseconds: 1480005, End Total Centiseconds: 1504093, Difference in Seconds: 240 
+End Time:  4:10:40,93 
+############## The whole computation took 240 SECONDS or 4 MINUTES ###################### 
+Running classifier: logistic with feature extractor: sbert_zscore_sqrt 
+Start Time:  4:10:40,94 
+Runtime for classifier logistic with feature extractor sbert_zscore_sqrt: 218 seconds 
+Start Total Centiseconds: 1504094, End Total Centiseconds: 1525963, Difference in Seconds: 218 
+End Time:  4:14:19,63 
+############## The whole computation took 218 SECONDS or 3 MINUTES ###################### 
+Running classifier: logistic with feature extractor: sbert_pareto_sqrt 
+Start Time:  4:14:19,64 
+Runtime for classifier logistic with feature extractor sbert_pareto_sqrt: 221 seconds 
+Start Total Centiseconds: 1525964, End Total Centiseconds: 1548086, Difference in Seconds: 221 
+End Time:  4:18:09,86 
+############## The whole computation took 221 SECONDS or 3 MINUTES ###################### 
+Running classifier: logistic with feature extractor: sbert_l2_normalize_sqrt 
+Start Time:  4:18:09,87 
+Runtime for classifier logistic with feature extractor sbert_l2_normalize_sqrt: 249 seconds 
+Start Total Centiseconds: 1548087, End Total Centiseconds: 1573083, Difference in Seconds: 249 
+End Time:  4:22:10,83 
+############## The whole computation took 249 SECONDS or 4 MINUTES ###################### 
+Running classifier: logistic with feature extractor: sbert_zscore_cdf 
+Start Time:  4:22:10,85 
+Runtime for classifier logistic with feature extractor sbert_zscore_cdf: 240 seconds 
+Start Total Centiseconds: 1573085, End Total Centiseconds: 1597107, Difference in Seconds: 240 
+End Time:  4:26:11,07 
+############## The whole computation took 240 SECONDS or 4 MINUTES ###################### 
+Running classifier: logistic with feature extractor: sbert_pareto_cdf 
+Start Time:  4:26:11,08 
