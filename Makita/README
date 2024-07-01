@@ -1,0 +1,3 @@
+To start the simulation, run the `command_main.bat` file in any of the folder (e.g. sbert_all/command_main.bat). This will run all combinations in sequence. Note that this will not retain any information specific to one combination or simulation.
+
+To produce graphs, use the manual.ipynb notebook.
